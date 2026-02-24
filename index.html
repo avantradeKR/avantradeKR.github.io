@@ -1,475 +1,439 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J-Cosme Partner | 일본 화장품 수출/인허가 전문 컨설팅</title>
+    <title>株式会社LogiCoreGear | 物流の未来を、地力と知力で再定義する</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-        .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1612817288484-6f916006741a?q=80&w=2070&auto=format&fit=crop');
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        /* 物流×テクノロジーを象徴するメインビジュアル画像を設定 */
+        .hero-bg { 
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.9)), url('https://images.unsplash.com/photo-1580674684081-7617fbf3d740?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
         }
-        .scroll-smooth {
-            scroll-behavior: smooth;
-        }
+        .accent-blue { color: #3b82f6; }
+        .gear-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 scroll-smooth">
+<body class="bg-slate-50 text-slate-900">
 
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm fixed w-full z-50 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20">
-                <div class="flex items-center">
-                    <a href="#" class="flex-shrink-0 flex items-center gap-2">
-                        <i data-lucide="flower-2" class="h-8 w-8 text-pink-500"></i>
-                        <span class="font-bold text-2xl tracking-tight text-gray-900">J-Cosme<span class="text-blue-600">Partner</span></span>
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium transition">회사 소개</a>
-                    <a href="#services" class="text-gray-600 hover:text-blue-600 font-medium transition">서비스 분야</a>
-                    <a href="#process" class="text-gray-600 hover:text-blue-600 font-medium transition">진행 절차</a>
-                    <a href="#faq" class="text-gray-600 hover:text-blue-600 font-medium transition">자주 묻는 질문</a>
-                    <a href="#contact" class="bg-blue-600 text-white px-5 py-2.5 rounded-full font-medium hover:bg-blue-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                        무료 상담 신청
-                    </a>
-                </div>
-                <!-- Mobile menu button -->
-                <div class="flex items-center md:hidden">
-                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-gray-500 hover:text-gray-600 focus:outline-none p-2">
-                        <i data-lucide="menu" class="h-6 w-6"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">회사 소개</a>
-                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">서비스 분야</a>
-                <a href="#process" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">진행 절차</a>
-                <a href="#contact" class="block w-full text-center mt-4 px-5 py-3 rounded-md font-medium text-white bg-blue-600 hover:bg-blue-700">무료 상담 신청</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-bg h-screen flex items-center justify-center relative">
-        <div class="text-center text-white px-4 max-w-4xl mx-auto">
-            <span class="inline-block py-1 px-3 rounded-full bg-pink-500/90 text-sm font-semibold mb-6 animate-fade-in-up">K-Beauty의 일본 진출 파트너</span>
-            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
-                복잡한 일본 화장품 인허가,<br>
-                <span class="text-blue-300">J-Cosme Partner</span>가 해결해 드립니다.
-            </h1>
-            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-                성분 분석부터 제조판매업 등록, 통관까지. <br class="hidden md:block">
-                일본 약기법(Yakki-ho)을 준수한 완벽한 수출 전략을 제안합니다.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-4 rounded-full font-bold transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                    수출 가능 여부 무료 진단
-                </a>
-                <a href="#services" class="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 text-lg px-8 py-4 rounded-full font-bold transition">
-                    서비스 자세히 보기
-                </a>
-            </div>
-        </div>
-        <div class="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
-            <a href="#about" class="text-white/70 hover:text-white">
-                <i data-lucide="chevron-down" class="h-10 w-10"></i>
+    <nav class="fixed top-0 left-0 w-full z-[100] bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+        
+        <div class="flex items-center">
+            <a href="/" class="flex items-center group">
+                <img src="logo.png" alt="LogiCoreGear Logo" class="h-10 w-auto">
+                <span class="ml-3 text-xl font-bold text-slate-900 group-hover:text-blue-600 transition tracking-tight">
+                    LogiCoreGear
+                </span>
             </a>
         </div>
-    </section>
 
-    <!-- Stats / Trust Section -->
-    <section class="py-12 bg-white border-b">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-gray-100">
-                <div>
-                    <p class="text-4xl font-bold text-blue-600 mb-2">150+</p>
-                    <p class="text-gray-600 text-sm">일본 진출 성공 브랜드</p>
-                </div>
-                <div>
-                    <p class="text-4xl font-bold text-blue-600 mb-2">99%</p>
-                    <p class="text-gray-600 text-sm">인허가 승인율</p>
-                </div>
-                <div>
-                    <p class="text-4xl font-bold text-blue-600 mb-2">10년</p>
-                    <p class="text-gray-600 text-sm">현지 실무 경력</p>
-                </div>
-                <div>
-                    <p class="text-4xl font-bold text-blue-600 mb-2">Total</p>
-                    <p class="text-gray-600 text-sm">원스톱 솔루션 제공</p>
-                </div>
+        <div class="hidden md:flex items-center space-x-10 text-sm font-semibold text-slate-600">
+            <a href="#philosophy" class="hover:text-blue-600 transition">理念</a>
+            <a href="#challenges" class="hover:text-blue-600 transition">解決する課題</a>
+            <a href="#gears" class="hover:text-blue-600 transition">事業内容</a>
+            <a href="#news" class="hover:text-blue-600 transition">お知らせ</a>
+            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg transition shadow-lg shadow-blue-500/20">
+                お問い合わせ
+            </a>
+        </div>
+
+        <div class="md:hidden">
+            <button class="text-slate-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+    <section class="relative h-screen flex items-center justify-center overflow-hidden text-white">
+        <video autoplay muted loop playsinline class="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover">
+            <source src="hero-movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 z-10 bg-gradient-to-br from-slate-900/90 via-slate-900/60 to-blue-900/50"></div>
+        <div class="relative z-20 text-center px-6 max-w-5xl mx-auto">
+            <h2 class="text-blue-400 font-bold tracking-[0.2em] mb-6 animate-pulse">LOGISTICS DX PARTNER</h2>
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-8 drop-shadow-2xl">
+                運送の「<span class="text-blue-500">地力</span>」、ソフトの「<span class="text-blue-500">知力</span>」を融合して、<br>
+                日本の矜持を再定義する。
+            </h1>
+            <p class="text-lg md:text-xl text-slate-200 max-w-3xl mx-auto mb-12 leading-relaxed">
+                汗をかく現場の熱意と、データを駆使するテクノロジーの論理。<br>
+                その乖離を埋め、物流の2024年問題を「進化の好機」へと変える。
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="#gears" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold transition shadow-lg shadow-blue-900/50">
+                    ソリューションを見る
+                </a>
+                <a href="#philosophy" class="border-2 border-white/80 hover:bg-white hover:text-slate-900 text-white px-8 py-4 rounded-full font-bold transition backdrop-blur-sm">
+                    私たちの想い
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- About / Why Us -->
-    <section id="about" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">왜 일본 시장 진출이 어려울까요?</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    일본은 세계 3위의 화장품 시장이지만, <br>
-                    까다로운 <span class="font-bold text-gray-800">'약기법(구 약사법)'</span> 규제로 인해 진입 장벽이 높습니다.
+    <section id="philosophy" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <span class="text-blue-600 font-bold tracking-[0.4em] block mb-4 uppercase">Philosophy</span>
+                <h2 class="text-3xl md:text-5xl font-black text-slate-900">現場の「熱」と、ITの「論理」。<br>その乖離を、埋める。</h2>
+            </div>
+            <div class="relative flex flex-col lg:flex-row items-center">
+                <div class="w-full lg:w-1/2 p-10 bg-slate-100 rounded-l-3xl relative min-h-[400px] flex flex-col justify-center overflow-hidden">
+                    <div class="absolute inset-0 opacity-20 grayscale">
+                        <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1000" alt="Logistics Ground" class="w-full h-full object-cover">
+                    </div>
+                    <div class="relative z-10">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-1 bg-orange-500 mr-4"></div>
+                            <span class="text-orange-600 font-bold tracking-widest">地力 - GROUND POWER</span>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-6 text-slate-800">汗をかく現場の、<br>揺るぎない矜持。</h3>
+                        <p class="text-slate-600 leading-loose">
+                            物流は、最後は「人」が動かすもの。深夜の道路、過酷な荷役、ドライバーの経験と勘。そこには効率化だけでは語れない、日本の経済を支える「熱」があります。私たちは、この現場の地力を何よりも尊重します。
+                        </p>
+                    </div>
+                </div>
+                <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden lg:block">
+                    <div class="w-32 h-32 bg-slate-900 rounded-full border-4 border-white shadow-2xl flex items-center justify-center animate-[spin_10s_linear_infinite]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.532 1.532 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.532 1.532 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 p-10 bg-slate-900 text-white rounded-r-3xl relative min-h-[400px] flex flex-col justify-center overflow-hidden">
+                    <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/circuit-board.png');"></div>
+                    <div class="relative z-10 lg:pl-16">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-1 bg-blue-500 mr-4"></div>
+                            <span class="text-blue-400 font-bold tracking-widest">知力 - LOGIC POWER</span>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-6">ソフトウェアが導き出す、<br>最適解という武器。</h3>
+                        <p class="text-slate-300 leading-loose">
+                            VR、データ、アルゴリズム。ITは魔法ではありません。現場の混沌を整理し、無駄を削ぎ落とし、最短距離を示すための「論理」です。私たちは、最先端の知力を用いて、2024年問題という壁を突破する道筋を描きます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-20 text-center max-w-5xl mx-auto">
+                <p class="text-xl md:text-2xl font-medium leading-relaxed text-slate-700 italic">
+                    「現場を知らないIT」は空論であり、「ITを持たない現場」は疲弊する<br>
+                    <span class="text-blue-600 font-bold">LogiCoreGearは、この二つを噛み合わせ、物流の新しい鼓動を創り出す存在です。</span>
                 </p>
             </div>
+        </div>
+    </section>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300 border border-gray-100">
-                    <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mb-6">
-                        <i data-lucide="alert-triangle" class="text-red-600 h-7 w-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">엄격한 성분 규제</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        한국에서는 허용되지만 일본에서는 금지되거나 배합 한도가 다른 성분이 많습니다. 사전 검토 없는 수출은 전량 폐기 위험이 있습니다.
-                    </p>
+    <section id="challenges" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-blue-600 font-bold tracking-widest block mb-4">CHALLENGES</span>
+                    <h2 class="text-4xl font-bold mb-8 leading-tight">物流が直面する、<br><span class="text-blue-600">待ったなしの現実。</span></h2>
+                    <ul class="space-y-8">
+                        <li class="flex items-start">
+                            <div class="bg-red-100 p-3 rounded-lg mr-4 shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">2024年問題（労働時間制限）</h3>
+                                <p class="text-slate-600 leading-relaxed">ドライバーの労働時間規制により運送能力が不足。効率化はもはや選択肢ではなく、事業継続のための必須条件です。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-red-100 p-3 rounded-lg mr-4 shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">深刻なドライバー不足</h3>
+                                <p class="text-slate-600 leading-relaxed">高齢化と若手等の担い手不足。経験の浅い人材を早期に即戦力化するための、新しい教育スキームが求められています。</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <!-- Card 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300 border border-gray-100">
-                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                        <i data-lucide="file-text" class="text-blue-600 h-7 w-7"></i>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2006&q=80" alt="データ分析と物流" class="rounded-2xl shadow-2xl object-cover h-full w-full absolute inset-0" style="filter: brightness(0.4);">
+                    <div class="relative z-10 bg-slate-900/80 backdrop-blur-sm rounded-2xl p-10 text-white border border-slate-700/50 m-6">
+                        <h3 class="text-xl font-bold mb-6 flex items-center">
+                            <span class="bg-blue-600 w-2 h-8 mr-3 rounded-full"></span>
+                            外免切替の「壁」
+                        </h3>
+                        <div class="text-sm text-blue-400 mb-2 font-mono tracking-wider">CURRENT PASS RATE</div>
+                        <div class="text-6xl font-bold mb-6 tracking-tight">10<span class="text-2xl font-normal text-blue-400">% 以下</span></div>
+                        <p class="text-slate-300 leading-relaxed">これが外国人ドライバーが直面する試験の現実です。言語の壁、日本の交通ルールへの不慣れ。私たちは、この数字をVR技術による「没入型事前学習」で塗り替えます。</p>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">복잡한 인허가 절차</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        제조판매업(수입대행) 허가가 필수입니다. 일본 내 책임자(MAH)가 없으면 제품을 통관조차 시킬 수 없습니다.
-                    </p>
-                </div>
-                <!-- Card 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300 border border-gray-100">
-                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
-                        <i data-lucide="languages" class="text-purple-600 h-7 w-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">까다로운 라벨링</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        일본어로 된 법정 표시 라벨 부착이 필수이며, 광고 문구 또한 약기법 위반 여부를 철저히 검토해야 합니다.
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-blue-600 font-bold tracking-wide uppercase text-sm">Our Services</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">성공적인 일본 진출을 위한 원스톱 솔루션</h2>
-                <p class="text-gray-600">제품 기획 단계부터 통관, 판매까지 모든 과정을 지원합니다.</p>
+<section id="global-network" class="py-32 bg-[#0B0F19] text-white relative overflow-hidden border-t border-white/5">
+    <div class="noise opacity-20"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 mb-24">
+            
+            <div class="lg:w-[45%]">
+                <span class="text-blue-500 font-bold tracking-[0.4em] block mb-4 uppercase text-sm">Global Bridge</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-10 serif leading-tight">国境を越え、<br>アジアの才能を日本の力へ。</h2>
+                
+                <div class="space-y-8">
+                    <div class="glass p-8 rounded-xl border-l-4 border-blue-600">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="text-2xl">🇵🇭 🇮🇩</span>
+                            <h4 class="font-bold text-xl text-blue-400">フィリピン・インドネシア拠点</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed font-light">
+                            マニラ、ジャカルタ、バンドンの送出し機関と完全提携。VRを用いた日本式運転教育を既に実施しており、即戦力人材を安定的に供給しています。
+                        </p>
+                    </div>
+
+                    <div class="glass p-8 rounded-xl border-l-4 border-slate-600">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="text-2xl">🇻🇳 🇰🇭</span>
+                            <h4 class="font-bold text-xl text-slate-200">ベトナム・カンボジア展開</h4>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed font-light">
+                            次なる戦略拠点として送出し機関と提携。現在、現地トレーニングセンターの設立準備を進めています。
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8">
-                    <!-- Service Item -->
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg">
-                                <i data-lucide="flask-conical" class="text-white h-6 w-6"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">전성분 분석 및 처방 검토</h3>
-                            <p class="text-gray-600">일본 후생노동성 기준에 맞춰 화장품 전성분을 분석(INCI 대조)하고, 배합 금지 성분 및 제한 성분을 1차적으로 스크리닝합니다.</p>
-                        </div>
-                    </div>
-                    <!-- Service Item -->
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg">
-                                <i data-lucide="building-2" class="text-white h-6 w-6"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">제조판매업(MAH) 대행 및 매칭</h3>
-                            <p class="text-gray-600">일본 내 수입자가 없을 경우, 신뢰할 수 있는 제조판매업 파트너를 매칭하거나 명의 대여 서비스를 연결하여 정식 수입이 가능하도록 돕습니다.</p>
-                        </div>
-                    </div>
-                    <!-- Service Item -->
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg">
-                                <i data-lucide="tag" class="text-white h-6 w-6"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">라벨링 및 패키지 감수</h3>
-                            <p class="text-gray-600">법정 표시 사항(전성분, 주의사항, 제조번호 등) 번역 및 디자인 감수를 통해 리콜 위험을 사전에 차단합니다.</p>
-                        </div>
-                    </div>
-                    <!-- Service Item -->
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg">
-                                <i data-lucide="ship" class="text-white h-6 w-6"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">PMDA 등록 및 통관 지원</h3>
-                            <p class="text-gray-600">화장품 외국 제조업자 신고(FM) 및 제조판매 신고서 제출 등 행정 절차를 대행하며, 신속한 통관을 지원합니다.</p>
-                        </div>
+            <div class="lg:w-[55%] relative">
+                <div class="relative z-10 rounded-[2rem] overflow-hidden shadow-[0_0_60px_rgba(0,0,0,0.6)] border border-white/10 aspect-video lg:aspect-auto">
+                    <video id="global-bridge-video" autoplay muted loop playsinline class="w-full h-full object-cover opacity-90">
+                        <source src="0224.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-transparent to-transparent opacity-60"></div>
+                    <div class="absolute bottom-10 left-10 right-10">
+                        <p class="text-white text-2xl font-bold serif leading-snug italic drop-shadow-lg">
+                            "来日前から、彼らはすでに<br>日本のプロフェッショナルである。"
+                        </p>
                     </div>
                 </div>
                 
-                <!-- Image/Visual Side -->
-                <div class="relative">
-                    <div class="absolute inset-0 bg-blue-600 rounded-3xl transform rotate-3 opacity-10"></div>
-                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop" alt="Business Consultation" class="relative rounded-3xl shadow-2xl z-10 w-full object-cover h-[600px]">
-                    
-                    <!-- Floating Card -->
-                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl z-20 max-w-xs hidden md:block animate-pulse-slow">
-                        <div class="flex items-center gap-3 mb-2">
-                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                            <span class="font-bold text-gray-800">승인 완료</span>
-                        </div>
-                        <p class="text-sm text-gray-600">어제 PMDA 등록이 완료되었습니다.<br>내일부터 선적이 가능합니다.</p>
-                    </div>
+                <div class="absolute -top-16 -right-16 w-64 h-64 opacity-10 animate-spin-slow pointer-events-none">
+                    <svg viewBox="0 0 100 100" class="fill-blue-500">
+                        <path d="M50 0 L55 15 L70 15 L60 25 L65 40 L50 30 L35 40 L40 25 L30 15 L45 15 Z" />
+                    </svg>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Process Section -->
-    <section id="process" class="py-20 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">진행 절차 (Process)</h2>
-                <p class="text-gray-400">복잡한 절차는 저희가 맡겠습니다. 고객님은 마케팅에만 집중하세요.</p>
-            </div>
-
-            <div class="relative">
-                <!-- Connecting Line (Desktop) -->
-                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-700 -translate-y-1/2 z-0"></div>
-
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-8 relative z-10">
-                    <!-- Step 1 -->
-                    <div class="bg-slate-800 p-6 rounded-xl text-center border border-gray-700 hover:border-blue-500 transition duration-300">
-                        <div class="w-12 h-12 bg-slate-700 text-blue-400 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold border border-gray-600">1</div>
-                        <h4 class="font-bold text-lg mb-2">상담 및 진단</h4>
-                        <p class="text-sm text-gray-400">제품 성분표(COA) 확인 및 수출 가능성 1차 진단</p>
-                    </div>
-                    <!-- Step 2 -->
-                    <div class="bg-slate-800 p-6 rounded-xl text-center border border-gray-700 hover:border-blue-500 transition duration-300">
-                        <div class="w-12 h-12 bg-slate-700 text-blue-400 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold border border-gray-600">2</div>
-                        <h4 class="font-bold text-lg mb-2">성분 분석</h4>
-                        <p class="text-sm text-gray-400">일본 약기법 기준 성분 검토 및 수정 제안</p>
-                    </div>
-                    <!-- Step 3 -->
-                    <div class="bg-slate-800 p-6 rounded-xl text-center border border-gray-700 hover:border-blue-500 transition duration-300">
-                        <div class="w-12 h-12 bg-slate-700 text-blue-400 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold border border-gray-600">3</div>
-                        <h4 class="font-bold text-lg mb-2">파트너 매칭</h4>
-                        <p class="text-sm text-gray-400">제조판매업자(수입자) 계약 및 행정 서류 준비</p>
-                    </div>
-                    <!-- Step 4 -->
-                    <div class="bg-slate-800 p-6 rounded-xl text-center border border-gray-700 hover:border-blue-500 transition duration-300">
-                        <div class="w-12 h-12 bg-slate-700 text-blue-400 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold border border-gray-600">4</div>
-                        <h4 class="font-bold text-lg mb-2">PMDA 등록</h4>
-                        <p class="text-sm text-gray-400">제조판매 신고 및 외국 제조업자 등록 완료</p>
-                    </div>
-                    <!-- Step 5 -->
-                    <div class="bg-slate-800 p-6 rounded-xl text-center border border-gray-700 hover:border-blue-500 transition duration-300">
-                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold shadow-lg shadow-blue-500/50">5</div>
-                        <h4 class="font-bold text-lg mb-2">수출 및 통관</h4>
-                        <p class="text-sm text-gray-400">라벨 작업 후 제품 선적 및 일본 내 유통 시작</p>
-                    </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 py-16 border-t border-white/10 bg-white/5 backdrop-blur-sm rounded-3xl px-12">
+            <div class="relative flex flex-col items-center md:items-start">
+                <div class="text-xs text-blue-500 font-bold tracking-[0.4em] mb-4 uppercase">Partner Countries</div>
+                <div class="text-6xl lg:text-7xl font-black text-white serif tracking-tighter">
+                    4 <span class="text-xl font-normal text-slate-500 ml-2 uppercase tracking-widest">Nations</span>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="py-20 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900">자주 묻는 질문</h2>
+                <p class="text-[12px] text-slate-400 mt-4 font-mono uppercase tracking-[0.2em]">Philippines / Indonesia / Vietnam / Cambodia</p>
             </div>
             
-            <div class="space-y-4">
-                <!-- FAQ Item -->
-                <details class="group bg-white rounded-lg shadow-sm open:shadow-md transition-all duration-300">
-                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6">
-                        <span class="text-lg">Q. 일본에 지사가 없는데 수출이 가능한가요?</span>
-                        <span class="transition group-open:rotate-180">
-                            <i data-lucide="chevron-down"></i>
-                        </span>
-                    </summary>
-                    <div class="text-gray-600 px-6 pb-6 animate-fade-in">
-                        네, 가능합니다. 일본에는 '화장품 제조판매업' 허가를 가진 파트너(수입대행사)가 필요합니다. 저희가 귀사의 제품을 수입하고 법적 책임을 져줄 신뢰할 수 있는 제조판매업자를 매칭해 드립니다.
-                    </div>
-                </details>
-
-                <!-- FAQ Item -->
-                <details class="group bg-white rounded-lg shadow-sm open:shadow-md transition-all duration-300">
-                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6">
-                        <span class="text-lg">Q. 성분 검토 기간은 얼마나 걸리나요?</span>
-                        <span class="transition group-open:rotate-180">
-                            <i data-lucide="chevron-down"></i>
-                        </span>
-                    </summary>
-                    <div class="text-gray-600 px-6 pb-6 animate-fade-in">
-                        일반적으로 전성분 리스트를 받은 후 영업일 기준 3~5일 이내에 1차 검토 결과를 전달드립니다. 특정 기능성 성분이 포함된 경우 조금 더 소요될 수 있습니다.
-                    </div>
-                </details>
-
-                <!-- FAQ Item -->
-                <details class="group bg-white rounded-lg shadow-sm open:shadow-md transition-all duration-300">
-                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6">
-                        <span class="text-lg">Q. 한국 패키지 그대로 판매할 수 있나요?</span>
-                        <span class="transition group-open:rotate-180">
-                            <i data-lucide="chevron-down"></i>
-                        </span>
-                    </summary>
-                    <div class="text-gray-600 px-6 pb-6 animate-fade-in">
-                        아니요, 불가능합니다. 일본 약기법에 따라 일본어로 된 법정 표시 라벨을 제품 용기나 단상자에 반드시 부착해야 합니다. 이를 위한 라벨링 작업을 일본 창고 혹은 보세 구역에서 진행해야 합니다.
-                    </div>
-                </details>
+            <div class="relative flex flex-col items-center md:items-start">
+                <div class="text-xs text-blue-500 font-bold tracking-[0.4em] mb-4 uppercase">Network Members</div>
+                <div class="text-6xl lg:text-7xl font-black text-white serif tracking-tighter">
+                    25 <span class="text-xl font-normal text-slate-500 ml-2 uppercase tracking-widest">Specialists</span>
+                </div>
+                <p class="text-[12px] text-slate-400 mt-4 font-mono uppercase tracking-[0.2em]">Local Instructors & Support Staff</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-16">
-                <!-- Contact Info -->
-                <div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">무료 상담 신청</h2>
-                    <p class="text-gray-600 mb-8 text-lg">
-                        제품 전성분표(INCI)를 준비해 주시면 더욱 빠르고 정확한 상담이 가능합니다. <br>
-                        부담 없이 문의해 주세요.
+<script>
+    window.addEventListener('load', () => {
+        const globalVideo = document.getElementById('global-bridge-video');
+        if (globalVideo) {
+            globalVideo.playbackRate = 0.5;
+        }
+    });
+</script>
+
+    <section id="vr-detail" class="py-32 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center mb-20">
+            <span class="text-blue-600 font-bold tracking-[0.4em] block mb-4 uppercase text-sm">Language × VR Hybrid</span>
+            <h2 class="text-4xl md:text-6xl font-black mb-8 text-slate-900 leading-tight">
+                日本語を学びながら、<br>日本の道を「体得」する。
+            </h2>
+            <div class="bg-slate-900 rounded-[2.5rem] p-12 md:p-20 text-white flex flex-col lg:flex-row items-center gap-16 shadow-2xl mt-12">
+                <div class="lg:w-1/2 text-left">
+                    <h3 class="text-3xl md:text-5xl font-bold mb-8 leading-tight text-blue-500">
+                        リスクなき、<br>究極の反復練習。
+                    </h3>
+                    <p class="text-slate-300 mb-10 text-lg leading-loose font-light">
+                        VRゴーグルを装着した瞬間、そこは日本の交差点。現実では不可能な「事故を伴う失敗」をバーチャルで繰り返すことで、安全意識を極限まで高めます。
                     </p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-blue-100 p-3 rounded-full text-blue-600">
-                                <i data-lucide="phone" class="h-6 w-6"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900">전화 문의</h4>
-                                <p class="text-gray-600">02-1234-5678 (평일 09:00 ~ 18:00)</p>
-                            </div>
+                    <div class="grid grid-cols-3 gap-6">
+                        <div>
+                            <div class="text-4xl font-black text-blue-500">90%</div>
+                            <div class="text-[10px] uppercase text-slate-500">Learning Retention</div>
                         </div>
-                        <div class="flex items-start gap-4">
-                            <div class="bg-blue-100 p-3 rounded-full text-blue-600">
-                                <i data-lucide="mail" class="h-6 w-6"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900">이메일</h4>
-                                <p class="text-gray-600">contact@jcosmepartner.com</p>
-                            </div>
+                        <div>
+                            <div class="text-4xl font-black text-blue-500">1/3</div>
+                            <div class="text-[10px] uppercase text-slate-500">Training Time</div>
                         </div>
-                        <div class="flex items-start gap-4">
-                            <div class="bg-blue-100 p-3 rounded-full text-blue-600">
-                                <i data-lucide="map-pin" class="h-6 w-6"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900">오시는 길</h4>
-                                <p class="text-gray-600">서울특별시 강남구 테헤란로 123, 글로벌타워 10층</p>
-                            </div>
+                        <div>
+                            <div class="text-4xl font-black text-blue-500">1/5</div>
+                            <div class="text-[10px] uppercase text-slate-500">Training Cost</div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Form -->
-                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100">
-                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('상담 신청이 완료되었습니다. 담당자가 24시간 이내에 연락드리겠습니다.');">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">회사명</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="회사명을 입력해주세요">
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">담당자명</label>
-                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="이름">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">연락처</label>
-                                <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="010-0000-0000">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">문의 내용</label>
-                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition mb-3">
-                                <option>문의 유형을 선택해주세요</option>
-                                <option>성분 분석 의뢰</option>
-                                <option>제조판매업자 매칭</option>
-                                <option>라벨링/패키지 검토</option>
-                                <option>기타 수출 문의</option>
-                            </select>
-                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="구체적인 문의 사항을 적어주세요 (예: 립스틱 5종 일본 수출 희망)"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-lg hover:bg-blue-700 transition shadow-md hover:shadow-lg">
-                            무료 진단 신청하기
-                        </button>
-                        <p class="text-xs text-center text-gray-400 mt-4">
-                            개인정보는 상담 목적으로만 사용되며 안전하게 보호됩니다.
-                        </p>
-                    </form>
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?auto=format&fit=crop&w=1000" class="rounded-3xl shadow-2xl object-cover">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center gap-2 mb-4">
-                        <i data-lucide="flower-2" class="h-6 w-6 text-pink-500"></i>
-                        <span class="font-bold text-xl text-white">J-Cosme<span class="text-blue-500">Partner</span></span>
+    <section id="gears" class="py-32 bg-[#0B0F19] text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-24">
+                <span class="text-blue-500 font-bold tracking-[0.4em] block mb-4 uppercase text-sm">Business Domain</span>
+                <h2 class="text-4xl md:text-5xl font-black">The 4 Gears</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-20">
+                <div class="group relative bg-slate-800/40 backdrop-blur-md pt-16 pb-10 px-8 rounded-xl border border-white/5 shadow-2xl">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-[#0B0F19] rounded-full border border-white/10 flex items-center justify-center z-20 group-hover:border-blue-500 transition duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.532 1.532 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.532 1.532 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                        </svg>
                     </div>
-                    <p class="text-sm leading-relaxed max-w-md">
-                        일본 화장품 수출의 A to Z. <br>
-                        복잡한 인허가는 전문가에게 맡기고 성공적인 비즈니스를 만드세요.
+                    <span class="text-blue-500 font-mono text-xs tracking-widest block mb-4 text-center opacity-50 uppercase">Gear 01</span>
+                    <h3 class="text-xl font-bold mb-4 text-center">グローバル人材教育</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light text-center">
+                        VR事前訓練により外免切替の一発合格を支援。来日前から育成します。
                     </p>
                 </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">바로가기</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#about" class="hover:text-blue-500 transition">회사 소개</a></li>
-                        <li><a href="#services" class="hover:text-blue-500 transition">서비스 분야</a></li>
-                        <li><a href="#process" class="hover:text-blue-500 transition">진행 절차</a></li>
-                    </ul>
+                <div class="group relative bg-slate-800/40 backdrop-blur-md pt-16 pb-10 px-8 rounded-xl border border-white/5 shadow-2xl">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-[#0B0F19] rounded-full border border-white/10 flex items-center justify-center z-20 group-hover:border-blue-500 transition duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <span class="text-blue-500 font-mono text-xs tracking-widest block mb-4 text-center opacity-50 uppercase">Gear 02</span>
+                    <h3 class="text-xl font-bold mb-4 text-center">オンライン技能教育</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light text-center">
+                        熟練ドライバーの技術を可視化。確実にスキルを伝承します。
+                    </p>
                 </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">법적 고지</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-blue-500 transition">이용약관</a></li>
-                        <li><a href="#" class="hover:text-blue-500 transition">개인정보처리방침</a></li>
-                    </ul>
+                <div class="group relative bg-slate-800/40 backdrop-blur-md pt-16 pb-10 px-8 rounded-xl border border-white/5 shadow-2xl">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-[#0B0F19] rounded-full border border-white/10 flex items-center justify-center z-20 group-hover:border-blue-500 transition duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <span class="text-blue-500 font-mono text-xs tracking-widest block mb-4 text-center opacity-50 uppercase">Gear 03</span>
+                    <h3 class="text-xl font-bold mb-4 text-center">科学的安全教育</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light text-center">
+                        事故データをVRで再現。科学的アプローチで、事故率を低減させます。
+                    </p>
+                </div>
+                <div class="group relative bg-slate-800/40 backdrop-blur-md pt-16 pb-10 px-8 rounded-xl border border-white/5 shadow-2xl">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-[#0B0F19] rounded-full border border-white/10 flex items-center justify-center z-20 group-hover:border-blue-500 transition duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <span class="text-blue-500 font-mono text-xs tracking-widest block mb-4 text-center opacity-50 uppercase">Gear 04</span>
+                    <h3 class="text-xl font-bold mb-4 text-center">デジタル導線コンサル</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light text-center">
+                        倉庫建設前からの3Dバーチャル検証。最適動線を構築します。
+                    </p>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-sm text-center">
-                &copy; 2024 J-Cosme Partner. All rights reserved.
+        </div>
+    </section>
+
+    <section id="news" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-end mb-12">
+            <div>
+                <span class="text-blue-600 font-bold tracking-widest block mb-4">NEWS & INSIGHTS</span>
+                <h2 class="text-3xl font-bold">Latest Updates</h2>
             </div>
+            <a href="#" class="text-blue-600 font-bold hover:text-blue-800 transition flex items-center">全ての記事を見る</a>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <article class="group cursor-pointer">
+                <div class="aspect-video rounded-xl mb-4 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?auto=format&fit=crop&w=1769" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <time class="text-sm text-slate-500 font-mono">2026.02.18</time>
+                <h3 class="font-bold mt-2 text-lg group-hover:text-blue-600">VRを活用した外免切替講習の導入事例</h3>
+            </article>
+            <article class="group cursor-pointer">
+                <div class="aspect-video rounded-xl mb-4 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1772" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <time class="text-sm text-slate-500 font-mono">2026.02.10</time>
+                <h3 class="font-bold mt-2 text-lg group-hover:text-blue-600">物流2024年問題対策：具体的なステップ</h3>
+            </article>
+            <article class="group cursor-pointer">
+                <div class="aspect-video rounded-xl mb-4 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2015" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <time class="text-sm text-slate-500 font-mono">2026.01.25</time>
+                <h3 class="font-bold mt-2 text-lg group-hover:text-blue-600">新サービス「デジタル導線コンサル」受付開始</h3>
+            </article>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 mb-8">
+            <div class="col-span-2">
+          <div class="mb-4 flex items-center">
+    <img src="logo.png" alt="LogiCoreGear Logo" class="h-10 w-auto">
+    <span class="ml-3 text-xl font-bold text-white">
+        LogiCoreGear
+    </span>
+</div>
+                <p class="text-sm leading-relaxed mb-4">
+                    運送の「地力」、ソフトの「知力」を融合して、日本の矜持を再定義する。<br>
+                    物流DXとVR教習で、現場の課題を解決するパートナー。
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">リンク</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#philosophy" class="hover:text-blue-400 transition">理念</a></li>
+                    <li><a href="#challenges" class="hover:text-blue-400 transition">解決する課題</a></li>
+                    <li><a href="#gears" class="hover:text-blue-400 transition">事業内容</a></li>
+                    <li><a href="#news" class="hover:text-blue-400 transition">お知らせ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">お問い合わせ</h4>
+                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold px-6 py-3 rounded-lg transition inline-block mb-4">
+                    お問い合わせフォームへ
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 border-t border-slate-800 pt-8 text-center text-sm">
+            &copy; 2026 LogiCoreGear Inc. All Rights Reserved.
         </div>
     </footer>
 
     <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-white/95', 'backdrop-blur-sm');
-                navbar.classList.remove('bg-white');
-            } else {
-                navbar.classList.add('bg-white');
-                navbar.classList.remove('bg-white/95', 'backdrop-blur-sm');
+        window.addEventListener('load', () => {
+            const video = document.querySelector('video');
+            if (video) {
+                video.playbackRate = 0.6;
             }
         });
     </script>
+
 </body>
 </html>
