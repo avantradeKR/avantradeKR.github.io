@@ -17,6 +17,28 @@
         }
         .accent-blue { color: #3b82f6; }
         .gear-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+
+        .need-image-wrap {
+            margin: 0 auto 3rem;
+            max-width: 15000px;
+        }
+        .need-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+            background: transparent;
+        }
+        @media (max-width: 640px) {
+            .need-image-wrap {
+                max-width: 100%;
+                margin-bottom: 2.5rem;
+            }
+        }
+
+
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -24,6 +46,7 @@
     <nav class="fixed top-0 left-0 w-full z-[100] bg-white/95 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
         
+        <!-- Logo -->
         <div class="flex items-center">
             <a href="/" class="flex items-center group">
                 <img src="logo.png" alt="LogiCoreGear Logo" class="h-10 w-auto">
@@ -33,23 +56,38 @@
             </a>
         </div>
 
-        <div class="hidden md:flex items-center space-x-10 text-sm font-semibold text-slate-600">
-            <a href="#philosophy" class="hover:text-blue-600 transition">理念</a>
-            <a href="#challenges" class="hover:text-blue-600 transition">解決する課題</a>
-            <a href="#gears" class="hover:text-blue-600 transition">事業内容</a>
-            <a href="#news" class="hover:text-blue-600 transition">お知らせ</a>
-            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg transition shadow-lg shadow-blue-500/20">
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-9 text-sm font-semibold text-slate-600">
+            <a href="/" class="hover:text-blue-600 transition">
+                Home
+            </a>
+
+            <a href="#challenges" class="hover:text-blue-600 transition">
+                解決する課題
+            </a>
+
+            <a href="flow_page.html" class="hover:text-blue-600 transition">
+                採用までのフロー
+            </a>
+
+            <a href="#company" class="hover:text-blue-600 transition">
+                会社概要
+            </a>
+
+            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg transition shadow-lg shadow-blue-500/20">
                 お問い合わせ
             </a>
         </div>
 
+        <!-- Mobile Menu Icon -->
         <div class="md:hidden">
-            <button class="text-slate-600">
+            <button class="text-slate-600" aria-label="メニューを開く">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
         </div>
+
     </div>
 </nav>
 
@@ -89,7 +127,7 @@
 
             <div class="mt-4">
                 <h1 class="text-2xl md:text-4xl font-bold tracking-[0.2em] text-white">
-                    融合して、日本の矜持を再定義する。
+                    融合して、日本の物流を、もう一度強くする。
                 </h1>
             </div>
         </div>
@@ -104,12 +142,11 @@
         </div>
     </div>
 </section>
-
     <section id="philosophy" class="py-24 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-20">
                 <span class="text-blue-600 font-bold tracking-[0.4em] block mb-4 uppercase">Philosophy</span>
-                <h2 class="text-3xl md:text-5xl font-black text-slate-900">現場の「熱」と、ITの「論理」。<br>その乖離を、埋める。</h2>
+                <h2 class="text-3xl md:text-5xl font-black text-slate-900">現場の熱量と、ITの精度を、<br><br>一つにする。</h2>
             </div>
             <div class="relative flex flex-col lg:flex-row items-center">
                 <div class="w-full lg:w-1/2 p-10 bg-slate-100 rounded-l-3xl relative min-h-[400px] flex flex-col justify-center overflow-hidden">
@@ -121,7 +158,7 @@
                             <div class="w-12 h-1 bg-orange-500 mr-4"></div>
                             <span class="text-orange-600 font-bold tracking-widest">地力 - GROUND POWER</span>
                         </div>
-                        <h3 class="text-3xl font-bold mb-6 text-slate-800">汗をかく現場の、<br>揺るぎない矜持。</h3>
+                        <h3 class="text-3xl font-bold mb-6 text-slate-800">現場で体を張る人たちの、<br>確かな誇り。</h3>
                         <p class="text-slate-600 leading-loose">
                             物流は、最後は「人」が動かすもの。深夜の道路、過酷な荷役、ドライバーの経験と勘。そこには効率化だけでは語れない、日本の経済を支える「熱」があります。私たちは、この現場の地力を何よりも尊重します。
                         </p>
@@ -141,7 +178,7 @@
                             <div class="w-12 h-1 bg-blue-500 mr-4"></div>
                             <span class="text-blue-400 font-bold tracking-widest">知力 - LOGIC POWER</span>
                         </div>
-                        <h3 class="text-3xl font-bold mb-6">ソフトウェアが導き出す、<br>最適解という武器。</h3>
+                        <h3 class="text-3xl font-bold mb-6">ソフトウェアが現場の判断を、<br>もっと確かにする。</h3>
                         <p class="text-slate-300 leading-loose">
                             VR、データ、アルゴリズム。ITは魔法ではありません。現場の混沌を整理し、無駄を削ぎ落とし、最短距離を示すための「論理」です。私たちは、最先端の知力を用いて、2024年問題という壁を突破する道筋を描きます。
                         </p>
@@ -150,8 +187,8 @@
             </div>
             <div class="mt-20 text-center max-w-5xl mx-auto">
                 <p class="text-xl md:text-2xl font-medium leading-relaxed text-slate-700 italic">
-                    「現場を知らないIT」は空論であり、「ITを持たない現場」は疲弊する<br>
-                    <span class="text-blue-600 font-bold">LogiCoreGearは、この二つを噛み合わせ、物流の新しい鼓動を創り出す存在です。</span>
+                    ITだけでは机上の空論になる。現場だけでは人が疲弊する。<br>
+                    <span class="text-blue-600 font-bold">LogiCoreGearは、現場の地力とITの知力を知り、現場を前に進めることができます。</span>
                 </p>
             </div>
         </div>
@@ -162,7 +199,7 @@
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div>
                     <span class="text-blue-600 font-bold tracking-widest block mb-4">CHALLENGES</span>
-                    <h2 class="text-4xl font-bold mb-8 leading-tight">物流が直面する、<br><span class="text-blue-600">待ったなしの現実。</span></h2>
+                    <h2 class="text-4xl font-bold mb-8 leading-tight">物流が直面する、<br><span class="text-blue-600">避けられない、物流の現実。</span></h2>
                     <ul class="space-y-8">
                         <li class="flex items-start">
                             <div class="bg-red-100 p-3 rounded-lg mr-4 shrink-0">
@@ -197,84 +234,357 @@
                         </h3>
                         <div class="text-sm text-blue-400 mb-2 font-mono tracking-wider">CURRENT PASS RATE</div>
                         <div class="text-6xl font-bold mb-6 tracking-tight">10<span class="text-2xl font-normal text-blue-400">% 以下</span></div>
-                        <p class="text-slate-300 leading-relaxed">これが外国人ドライバーが直面する試験の現実です。言語の壁、日本の交通ルールへの不慣れ。私たちは、この数字をVR技術による「没入型事前学習」で塗り替えます。</p>
+                        <p class="text-slate-300 leading-relaxed">これが外国人ドライバーが直面する試験の現実です。言語の壁、日本の交通ルールへの不慣れ。私私たちは、この数字をシミュレーターによる反復学習と徹底したサポートで塗り替えます。</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-<section id="global-network" class="py-32 bg-[#0B0F19] text-white relative overflow-hidden border-t border-white/5">
-    <div class="noise opacity-20"></div>
-    
+<section id="gears" class="py-32 bg-white text-slate-900 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 mb-24">
-            
-            <div class="lg:w-[45%]">
-                <span class="text-blue-500 font-bold tracking-[0.4em] block mb-4 uppercase text-sm">Global Bridge</span>
-                <h2 class="text-4xl md:text-4xl font-bold mb-10 serif leading-tight">国境を越え、<br>アジアの才能を日本の力へ。</h2>
-                
-                <div class="space-y-8">
-                    <div class="glass p-8 rounded-xl border-l-4 border-blue-600">
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="text-2xl">🇵🇭 🇮🇩</span>
-                            <h4 class="font-bold text-xl text-blue-400">フィリピン・インドネシア拠点</h4>
-                        </div>
-                        <p class="text-slate-300 text-sm leading-relaxed font-light">
-                            マニラ、ジャカルタ、バンドンの送出し機関と完全提携。VRを用いた日本式運転教育を既に実施しており、即戦力人材を安定的に供給しています。
-                        </p>
-                    </div>
 
-                    <div class="glass p-8 rounded-xl border-l-4 border-slate-600">
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="text-2xl">🇻🇳 🇰🇭</span>
-                            <h4 class="font-bold text-xl text-slate-200">ベトナム・カンボジア展開</h4>
+        <!-- The 4 Core Gears Header -->
+        <div class="text-center mb-16">
+            <span class="text-sky-700 font-bold tracking-[0.4em] block mb-4 uppercase text-sm">
+                Business Domain
+            </span>
+            <h2 class="text-4xl md:text-6xl font-black serif text-slate-900">
+                The <span class="text-orange-500">4</span> Core Gears
+            </h2>
+            <p class="text-slate-600 mt-6 max-w-2xl mx-auto font-light leading-relaxed">
+                現場の「地力」を最大化し、物流の未来を動かす4つの基軸事業。
+            </p>
+        </div>
+
+        <!-- GEAR 01 Block -->
+        <div id="gear01-block" class="bg-[#EAF6FF] rounded-[3rem] p-6 md:p-12 lg:p-16 shadow-2xl shadow-sky-100/80 border border-sky-100 relative overflow-hidden">
+            <div class="absolute -right-24 -top-24 w-80 h-80 bg-sky-200/40 rounded-full blur-3xl"></div>
+            <div class="absolute -left-20 bottom-20 w-64 h-64 bg-white/70 rounded-full blur-3xl"></div>
+
+            <div class="relative z-10">
+                <div class="text-center mb-14">
+                    <span class="inline-flex items-center bg-white/80 text-sky-700 border border-sky-100 px-5 py-2 rounded-full text-xs font-bold tracking-[0.25em] uppercase mb-6 shadow-sm">
+                        Business Domain
+                    </span>
+                    <h3 class="text-4xl md:text-6xl font-black text-sky-800 tracking-tight mb-5">
+                        GEAR <span class="text-orange-400">01</span>
+                    </h3>
+                    <p class="text-slate-700 text-lg md:text-xl font-bold">
+                        採用・免許取得サポート
+                    </p>
+                </div>
+
+                <!-- BUSINESS DOMAIN / Main Support -->
+                <div class="bg-white rounded-[2.5rem] p-8 md:p-14 mb-14 shadow-xl shadow-sky-100/70 border border-sky-100">
+                    <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+                        <div class="lg:col-span-7">
+                            <span class="inline-flex items-center bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-xs font-bold tracking-[0.25em] uppercase mb-6">
+                                For Employers
+                            </span>
+
+                            <div class="flex items-center gap-4 mb-5">
+                                <span class="text-sky-700 font-mono text-sm tracking-widest uppercase">
+                                    Gear 01
+                                </span>
+                                <span class="h-px w-12 bg-sky-300"></span>
+                                <span class="text-xs font-bold text-white bg-sky-700 px-3 py-1 rounded-full tracking-widest uppercase">
+                                    Available Now
+                                </span>
+                            </div>
+
+                            <h4 class="text-3xl md:text-5xl font-black leading-tight mb-8 text-slate-900">
+                                採用・免許取得サポート
+                            </h4>
+
+                            <p class="text-slate-700 text-base md:text-lg leading-loose font-medium max-w-3xl mb-10">
+                                海外人材の採用準備から、来日前教育、外免切替支援までを一貫してサポート。
+                                入国後の待機期間を短縮し、最短での現場投入を目指します。
+                            </p>
+
+                            <a href="gear01_page.html" class="group inline-flex items-center justify-center bg-orange-500 hover:bg-sky-800 text-white px-8 py-4 rounded-full font-bold transition-all shadow-xl shadow-sky-200/70">
+                                GEAR 01｜採用・免許取得サポート　詳しく見る
+                                <span class="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                            </a>
                         </div>
-                        <p class="text-slate-400 text-sm leading-relaxed font-light">
-                            次なる戦略拠点として送出し機関と提携。現在、現地トレーニングセンターの設立準備を進めています。
-                        </p>
+
+                        <div class="lg:col-span-5">
+                            <div class="bg-slate-50 rounded-[2rem] p-8 md:p-10 border border-sky-100 shadow-sm">
+                                <p class="text-sm font-bold text-sky-700 tracking-widest uppercase mb-6">
+                                    Main Support Flow
+                                </p>
+
+                                <div class="space-y-5">
+                                    <div class="flex items-start gap-4">
+                                        <span class="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-700 text-white font-bold text-sm">1</span>
+                                        <div>
+                                            <h5 class="font-bold text-slate-900 mb-1">海外人材の採用準備</h5>
+                                            <p class="text-sm text-slate-500 leading-relaxed">受入企業に必要な準備を整理し、採用導線を設計します。</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-4">
+                                        <span class="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-700 text-white font-bold text-sm">2</span>
+                                        <div>
+                                            <h5 class="font-bold text-slate-900 mb-1">来日前シミュレーター教育</h5>
+                                            <p class="text-sm text-slate-500 leading-relaxed">現地で日本式運転ルールを反復学習します。</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-4">
+                                        <span class="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-700 text-white font-bold text-sm">3</span>
+                                        <div>
+                                            <h5 class="font-bold text-slate-900 mb-1">外免切替・現場投入支援</h5>
+                                            <p class="text-sm text-slate-500 leading-relaxed">入国後の試験準備から早期稼働までを支援します。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="lg:w-[55%] relative">
-                <div class="relative z-10 rounded-[2rem] overflow-hidden shadow-[0_0_60px_rgba(0,0,0,0.6)] border border-white/10 aspect-video lg:aspect-auto">
-                    <video id="global-bridge-video" autoplay muted loop playsinline class="w-full h-full object-cover opacity-90">
-                        <source src="0224.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-transparent to-transparent opacity-60"></div>
-                    <div class="absolute bottom-10 left-10 right-10">
-                        <p class="text-white text-2xl font-bold serif leading-snug italic drop-shadow-lg">
-                            "来日前から、彼らはすでに<br>日本のプロフェッショナルである。"
-                        </p>
+                <!-- For Employers -->
+                <div id="for-employers" class="bg-white rounded-[2.5rem] p-8 md:p-14 mb-14 shadow-xl shadow-sky-100/70 border border-sky-100">
+    <div class="max-w-7xl mx-auto text-center">
+                        <span class="text-sky-700 font-bold tracking-[0.35em] block mb-4 uppercase text-sm">
+                            For Employers
+                        </span>
+
+                        <h4 class="text-3xl md:text-4xl font-bold mb-10 serif leading-[2] text-slate-900">
+                            外国人ドライバーの採用・育成で、<br class="hidden md:block">
+                            こんなお悩みはありませんか？
+                        </h4>
+
+                        <div class="need-image-wrap">
+                            <img src="NEED.png" alt="外国人ドライバー採用に関する3つの課題" class="need-image">
+                        </div>
+
+
+                        <a href="flow_page.html" class="group inline-flex items-center justify-center bg-orange-500 hover:bg-sky-800 text-white px-10 py-4 rounded-full font-bold transition-all shadow-xl shadow-sky-200/70">
+                            採用までの流れを見る
+                            <span class="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                        </a>
                     </div>
                 </div>
-                
-                <div class="absolute -top-16 -right-16 w-64 h-64 opacity-10 animate-spin-slow pointer-events-none">
-                    <svg viewBox="0 0 100 100" class="fill-blue-500">
-                        <path d="M50 0 L55 15 L70 15 L60 25 L65 40 L50 30 L35 40 L40 25 L30 15 L45 15 Z" />
-                    </svg>
+
+                <!-- Language × Simulator Hybrid -->
+                <div id="vr-detail" class="bg-white rounded-[2.5rem] p-8 md:p-14 mb-14 shadow-xl shadow-sky-100/70 border border-sky-100">
+                    <div class="text-center mb-12">
+                        <span class="text-sky-700 font-bold tracking-[0.4em] block mb-4 uppercase text-sm">
+                            Language × Simulator Hybrid
+                        </span>
+                        <h4 class="text-4xl md:text-6xl font-black mb-8 text-slate-900 leading-tight">
+                            日本語を学びながら、<br>日本の道を「体得」する。
+                        </h4>
+                    </div>
+
+                    <div class="bg-slate-900 rounded-[2.5rem] p-10 md:p-16 text-white flex flex-col lg:flex-row items-center gap-14 shadow-2xl">
+                        <div class="lg:w-1/2 text-left">
+                            <h5 class="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+                                失敗を恐れず、<span class="text-sky-300"><br>何度でも繰り返せる練習環境。</span>
+                            </h5>
+                            <p class="text-slate-300 mb-10 text-lg leading-loose font-light">
+                                何度失敗しても、誰も傷つかない。シミュレーターの中に、日本の交差点がある。現実では許されない「ギリギリの判断」を繰り返すことで、本番に強いドライバーが育ちます。
+                            </p>
+
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="w-fit text-center">
+                                    <div class="text-4xl font-black text-orange-400">90%</div>
+                                    <div class="text-[15px] uppercase text-slate-400 mt-2 whitespace-nowrap">学習向上率</div>
+                                </div>
+                                <div class="w-fit text-center">
+                                    <div class="text-4xl font-black text-orange-400">1/3</div>
+                                    <div class="text-[15px] uppercase text-slate-400 mt-2 whitespace-nowrap">学習時間</div>
+                                </div>
+                                <div class="w-fit text-center">
+                                    <div class="text-4xl font-black text-orange-400">1/5</div>
+                                    <div class="text-[15px] uppercase text-slate-400 mt-2 whitespace-nowrap">費用</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:w-1/2">
+                            <img src="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?auto=format&fit=crop&w=1000" class="rounded-3xl shadow-2xl object-cover border border-white/10" alt="VR Training">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Global Bridge -->
+                <div id="global-network" class="bg-white rounded-[2.5rem] p-8 md:p-14 mb-14 shadow-xl shadow-sky-100/70 border border-sky-100">
+                    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 mb-16">
+                        <div class="lg:w-[45%]">
+                            <span class="text-sky-700 font-bold tracking-[0.4em] block mb-4 uppercase text-sm">
+                                Global Bridge
+                            </span>
+                            <h4 class="text-4xl md:text-4xl font-bold mb-10 serif leading-tight text-slate-900">
+                                国境を越え、<br>アジアの人材が、日本の現場を支える。
+                            </h4>
+
+                            <div class="space-y-8">
+                                <div class="bg-slate-50 p-8 rounded-xl border-l-4 border-sky-700 shadow-sm">
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <span class="text-2xl">🇵🇭 🇮🇩</span>
+                                        <h5 class="font-bold text-xl text-sky-700">フィリピン・インドネシア拠点</h5>
+                                    </div>
+                                    <p class="text-slate-600 text-sm leading-relaxed font-light">
+                                        マニラ、ジャカルタ、バンドンの送出し機関と完全提携。VRを用いた日本式運転教育を既に実施しており、即戦力人材を安定的に供給しています。
+                                    </p>
+                                </div>
+
+                                <div class="bg-slate-50 p-8 rounded-xl border-l-4 border-sky-200 shadow-sm">
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <span class="text-2xl">🇻🇳 🇰🇭</span>
+                                        <h5 class="font-bold text-xl text-slate-900">ベトナム・カンボジア展開</h5>
+                                    </div>
+                                    <p class="text-slate-600 text-sm leading-relaxed font-light">
+                                        次なる戦略拠点として送出し機関と提携。現在、現地トレーニングセンターの設立準備を進めています。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:w-[55%] relative">
+                            <div class="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl shadow-sky-100/80 border border-sky-100 aspect-video lg:aspect-auto">
+                                <video id="global-bridge-video" autoplay muted loop playsinline class="w-full h-full object-cover opacity-90">
+                                    <source src="0224.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-70"></div>
+                                <div class="absolute bottom-10 left-10 right-10">
+                                    <p class="text-white text-2xl font-bold serif leading-snug italic drop-shadow-lg">
+                                        "即戦力となり<br>貴社を支えます。"
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 border border-sky-100 bg-sky-50/70 rounded-3xl px-8 md:px-12">
+                        <div class="relative flex flex-col items-center md:items-start">
+                            <div class="text-xl text-sky-700 font-bold tracking-[0.4em] mb-4 uppercase">Partner Countries</div>
+                            <div class="text-6xl lg:text-7xl font-black text-orange-400 serif tracking-tighter">
+                                4 <span class="text-xl font-normal text-sky-700 ml-2 uppercase tracking-widest">Nations</span>
+                            </div>
+                            <p class="text-[12px] text-slate-500 mt-4 font-mono uppercase tracking-[0.2em]">Philippines / Indonesia / Vietnam / Cambodia</p>
+                        </div>
+
+                        <div class="relative flex flex-col items-center md:items-start">
+                            <div class="text-xl text-sky-700 font-bold tracking-[0.4em] mb-4 uppercase">Network Members</div>
+                            <div class="text-6xl lg:text-7xl font-black text-orange-400 serif tracking-tighter">
+                                25 <span class="text-xl font-normal text-sky-700 ml-2 uppercase tracking-widest">Specialists</span>
+                            </div>
+                            <p class="text-[12px] text-slate-500 mt-4 font-mono uppercase tracking-[0.2em]">Local Instructors & Support Staff</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subsidy Support -->
+                <div id="subsidy-support" class="bg-white rounded-[2.5rem] p-8 md:p-14 shadow-xl shadow-sky-100/70 border border-sky-100 relative overflow-hidden">
+                    <div class="absolute -right-24 -bottom-24 w-72 h-72 bg-sky-200/40 rounded-full blur-3xl"></div>
+                    <div class="grid lg:grid-cols-12 gap-10 items-center relative z-10">
+                        <div class="lg:col-span-7">
+                            <span class="text-sky-700 font-bold tracking-[0.35em] block mb-5 uppercase text-sm">
+                                Subsidy Support
+                            </span>
+
+                            <h4 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight mb-8">
+                                補助金・助成金で、<br>
+                                採用コストを大幅に削減。
+                            </h4>
+
+                            <p class="text-slate-700 text-base md:text-lg leading-loose font-medium max-w-3xl">
+                                LCGのサポートにより、これまでの導入企業では採用コストを圧縮できた実績があります。
+                                活用できる補助金・助成金の詳細は、お問い合わせ時にご案内しています。
+                            </p>
+                        </div>
+
+                        <div class="lg:col-span-5">
+                            <div class="bg-slate-50 rounded-[2rem] border border-sky-100 shadow-sm p-8 md:p-10">
+                                <div class="mb-8">
+                                    <p class="text-sm font-bold text-slate-500 tracking-widest uppercase mb-3">
+                                        Cost Reduction
+                                    </p>
+
+                                    <div class="flex items-end gap-3">
+                                        <span class="text-6xl md:text-7xl font-black text-orange-400 tracking-tight">1/2</span>
+                                        <span class="text-xl md:text-2xl font-bold text-slate-900 mb-2">以上</span>
+                                    </div>
+
+                                    <p class="text-sm text-slate-500 mt-3 leading-relaxed">
+                                        導入企業における採用コスト圧縮実績
+                                    </p>
+                                </div>
+
+                                <div class="border-t border-sky-100 pt-8">
+                                    <a href="#contact" class="group inline-flex w-full items-center justify-center bg-orange-500 hover:bg-sky-800 text-white px-7 py-4 rounded-full font-bold transition-all shadow-xl shadow-sky-200/70 text-center leading-relaxed">
+                                        補助金・費用について相談する
+                                        <span class="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 py-16 border-t border-white/10 bg-white/5 backdrop-blur-sm rounded-3xl px-12">
-<div class="relative flex flex-col items-center md:items-start">
-    <div class="text-xl text-orange-300 font-bold tracking-[0.4em] mb-4 uppercase">Partner Countries</div>
-    <div class="text-6xl lg:text-7xl font-black text-orange-500 serif tracking-tighter">
-        4 <span class="text-xl font-normal text-orange-500 ml-2 uppercase tracking-widest">Nations</span>
-    </div>
-    <p class="text-[12px] text-white-200 mt-4 font-mono uppercase tracking-[0.2em]">Philippines / Indonesia / Vietnam / Cambodia</p>
-</div>
-            
-            <div class="relative flex flex-col items-center md:items-start">
-                <div class="text-xl text-orange-300 font-bold tracking-[0.4em] mb-4 uppercase">Network Members</div>
-                <div class="text-6xl lg:text-7xl font-black text-orange-500 serif tracking-tighter">
-                    25 <span class="text-xl font-normal text-orange-500 ml-2 uppercase tracking-widest">Specialists</span>
+        <!-- Future Business Domains -->
+        <div id="future-gears" class="pt-28">
+            <div class="text-center mb-20">
+                <span class="text-sky-700 font-bold tracking-[0.4em] block mb-4 uppercase text-sm">
+                    Future Business Domains
+                </span>
+                <h3 class="text-3xl md:text-5xl font-black text-slate-900">
+                    Gearing up other <span class="text-orange-500">GEARS</span>
+                </h3>
+                <p class="text-slate-600 mt-6 max-w-2xl mx-auto font-light">
+                    GEAR 01を起点に、今後展開予定の物流DXソリューション。
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-x-8 gap-y-20">
+                <div class="group relative bg-white pt-16 pb-10 px-8 rounded-xl border border-sky-100 shadow-xl shadow-sky-100/70 transition-all duration-500 hover:border-sky-300 hover:-translate-y-1">
+                    <span class="absolute top-5 right-5 bg-sky-50 text-sky-700 border border-sky-100 px-3 py-1 rounded-full text-[10px] font-bold tracking-[0.18em] uppercase">
+                        Gearing Up
+                    </span>
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-sky-700 animate-spin-gear transition-colors duration-500 group-hover:text-sky-900" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.532 1.532 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.532 1.532 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <span class="text-sky-700 font-mono text-xs tracking-widest block mb-4 text-center opacity-70 uppercase">Gear 02</span>
+                    <h4 class="text-xl font-bold mb-4 serif text-center text-slate-900">オンライン技能教育</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed font-light text-center">熟練ドライバーの技術を可視化。確実にスキルを伝承します。</p>
                 </div>
-                <p class="text-[12px] text-white-200 mt-4 font-mono uppercase tracking-[0.2em]">Local Instructors & Support Staff</p>
+
+                <div class="group relative bg-white pt-16 pb-10 px-8 rounded-xl border border-sky-100 shadow-xl shadow-sky-100/70 transition-all duration-500 hover:border-sky-300 hover:-translate-y-1">
+                    <span class="absolute top-5 right-5 bg-sky-50 text-sky-700 border border-sky-100 px-3 py-1 rounded-full text-[10px] font-bold tracking-[0.18em] uppercase">
+                        Gearing Up
+                    </span>
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-sky-700 animate-spin-gear transition-colors duration-500 group-hover:text-sky-900" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.532 1.532 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.532 1.532 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <span class="text-sky-700 font-mono text-xs tracking-widest block mb-4 text-center opacity-70 uppercase">Gear 03</span>
+                    <h4 class="text-xl font-bold mb-4 serif text-center text-slate-900">科学的安全教育</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed font-light text-center">事故データをシミュレーターで再現。科学的アプローチで、事故率を低減させます。</p>
+                </div>
+
+                <div class="group relative bg-white pt-16 pb-10 px-8 rounded-xl border border-sky-100 shadow-xl shadow-sky-100/70 transition-all duration-500 hover:border-sky-300 hover:-translate-y-1">
+                    <span class="absolute top-5 right-5 bg-sky-50 text-sky-700 border border-sky-100 px-3 py-1 rounded-full text-[10px] font-bold tracking-[0.18em] uppercase">
+                        Gearing Up
+                    </span>
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-sky-700 animate-spin-gear transition-colors duration-500 group-hover:text-sky-900" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.532 1.532 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.532 1.532 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <span class="text-sky-700 font-mono text-xs tracking-widest block mb-4 text-center opacity-70 uppercase">Gear 04</span>
+                    <h4 class="text-xl font-bold mb-4 serif text-center text-slate-900">デジタル導線コンサル</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed font-light text-center">倉庫建設前からの3Dバーチャル検証。最適動線を構築します。</p>
+                </div>
             </div>
         </div>
     </div>
@@ -289,49 +599,7 @@
     });
 </script>
 
-  <section id="vr-detail" class="py-32 bg-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center mb-20">
-        <span class="text-blue-600 font-bold tracking-[0.4em] block mb-4 uppercase text-sm">Language × VR Hybrid</span>
-        <h2 class="text-4xl md:text-6xl font-black mb-8 text-slate-900 leading-tight">
-            日本語を学びながら、<br>日本の道を「体得」する。
-        </h2>
-        
-        <div class="bg-slate-900 rounded-[2.5rem] p-12 md:p-20 text-white flex flex-col lg:flex-row items-center gap-16 shadow-2xl mt-12">
-            <div class="lg:w-1/2 text-left">
-                <h3 class="text-3xl md:text-5xl font-bold mb-8 leading-tight">
-                    リスクなき、<span class="text-blue-500"><br>究極の反復練習。</span>
-                </h3>
-                
-                <p class="text-slate-300 mb-10 text-lg leading-loose font-light">
-                    VRゴーグルを装着した瞬間、そこは日本の交差点。現実では不可能な「事故を伴う失敗」をバーチャルで繰り返すことで、安全意識を極限まで高めます。
-                </p>
-
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="w-fit text-center">
-                        <div class="text-4xl font-black text-orange-400">90%</div>
-                        <div class="text-[15px] uppercase text-slate-500 mt-2 whitespace-nowrap">学習向上率</div>
-                    </div>
-                    
-                    <div class="w-fit text-center">
-                        <div class="text-4xl font-black text-orange-400">1/3</div>
-                        <div class="text-[15px] uppercase text-slate-500 mt-2 whitespace-nowrap">学習時間</div>
-                    </div>
-                    
-                    <div class="w-fit text-center">
-                        <div class="text-4xl font-black text-orange-400">1/5</div>
-                        <div class="text-[15px] uppercase text-slate-500 mt-2 whitespace-nowrap">費用</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="lg:w-1/2">
-                <img src="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?auto=format&fit=crop&w=1000" class="rounded-3xl shadow-2xl object-cover" alt="VR Training">
-            </div>
-        </div>
-    </div>
-</section>
 <style>
-    /* 歯車をゆっくり常時回転させるアニメーション */
     @keyframes spin-slow {
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
@@ -341,77 +609,7 @@
     }
 </style>
 
-<section id="gears" class="py-32 bg-[#0B0F19] text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <div class="text-center mb-24">
-            <span class="text-blue-500 font-bold tracking-[0.4em] block mb-4 uppercase text-sm">Business Domain</span>
-            <h2 class="text-4xl md:text-5xl font-black serif text-white">
-                The 4 <span class="text-orange-500">Core</span> Gears
-            </h2>
-            <p class="text-slate-500 mt-6 max-w-2xl mx-auto font-light">
-                現場の「地力」を最大化し、物流の未来を動かす4つの基軸事業。
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-20">
-            
-            <div class="group relative bg-slate-800/40 backdrop-blur-md pt-16 pb-10 px-8 rounded-xl border border-white/5 shadow-2xl transition-all duration-500 hover:border-orange-500/30">
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-500 animate-spin-gear transition-colors duration-500 group-hover:text-orange-500" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.532 1.532 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.532 1.532 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
-                    </svg>
-                </div>
-                <span class="text-blue-500 font-mono text-xs tracking-widest block mb-4 text-center opacity-50 uppercase group-hover:text-orange-500 group-hover:opacity-100 transition-all">Gear 01</span>
-                <h3 class="text-xl font-bold mb-4 serif text-center text-white group-hover:text-orange-500 transition-colors">グローバル人材教育</h3>
-                <p class="text-slate-400 text-sm leading-relaxed font-light text-center">
-                    VR事前訓練により外免切替の一発合格を支援。来日前から育成します。
-                </p>
-            </div>
-
-            <div class="group relative bg-slate-800/40 backdrop-blur-md pt-16 pb-10 px-8 rounded-xl border border-white/5 shadow-2xl transition-all duration-500 hover:border-orange-500/30">
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-500 animate-spin-gear transition-colors duration-500 group-hover:text-orange-500" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.532 1.532 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.532 1.532 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
-                    </svg>
-                </div>
-                <span class="text-blue-500 font-mono text-xs tracking-widest block mb-4 text-center opacity-50 uppercase group-hover:text-orange-500 group-hover:opacity-100 transition-all">Gear 02</span>
-                <h3 class="text-xl font-bold mb-4 serif text-center text-white group-hover:text-orange-500 transition-colors">オンライン技能教育</h3>
-                <p class="text-slate-400 text-sm leading-relaxed font-light text-center">
-                    熟練ドライバーの技術を可視化。確実にスキルを伝承します。
-                </p>
-            </div>
-
-            <div class="group relative bg-slate-800/40 backdrop-blur-md pt-16 pb-10 px-8 rounded-xl border border-white/5 shadow-2xl transition-all duration-500 hover:border-orange-500/30">
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-500 animate-spin-gear transition-colors duration-500 group-hover:text-orange-500" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.532 1.532 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.532 1.532 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
-                    </svg>
-                </div>
-                <span class="text-blue-500 font-mono text-xs tracking-widest block mb-4 text-center opacity-50 uppercase group-hover:text-orange-500 group-hover:opacity-100 transition-all">Gear 03</span>
-                <h3 class="text-xl font-bold mb-4 serif text-center text-white group-hover:text-orange-500 transition-colors">科学的安全教育</h3>
-                <p class="text-slate-400 text-sm leading-relaxed font-light text-center">
-                    事故データをVRで再現。科学的アプローチで、事故率を低減させます。
-                </p>
-            </div>
-
-            <div class="group relative bg-slate-800/40 backdrop-blur-md pt-16 pb-10 px-8 rounded-xl border border-white/5 shadow-2xl transition-all duration-500 hover:border-orange-500/30">
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-500 animate-spin-gear transition-colors duration-500 group-hover:text-orange-500" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.532 1.532 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.532 1.532 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
-                    </svg>
-                </div>
-                <span class="text-blue-500 font-mono text-xs tracking-widest block mb-4 text-center opacity-50 uppercase group-hover:text-orange-500 group-hover:opacity-100 transition-all">Gear 04</span>
-                <h3 class="text-xl font-bold mb-4 serif text-center text-white group-hover:text-orange-500 transition-colors">デジタル導線コンサル</h3>
-                <p class="text-slate-400 text-sm leading-relaxed font-light text-center">
-                    倉庫建設前からの3Dバーチャル検証。最適動線を構築します。
-                </p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-    <section id="news" class="py-24 bg-white">
+<section id="news" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-end mb-12">
             <div>
                 <span class="text-blue-600 font-bold tracking-widest block mb-4">NEWS & INSIGHTS</span>
@@ -444,6 +642,8 @@
         </div>
     </section>
 
+
+
     <footer class="bg-slate-900 text-slate-400 py-12">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 mb-8">
             <div class="col-span-2">
@@ -454,7 +654,7 @@
     </span>
 </div>
                 <p class="text-sm leading-relaxed mb-4">
-                    運送の「地力」、ソフトの「知力」を融合して、日本の矜持を再定義する。<br>
+                    融合して、日本の物流を、もう一度強くする。<br>
                     物流DXとVR教習で、現場の課題を解決するパートナー。
                 </p>
             </div>
@@ -488,5 +688,6 @@
         });
     </script>
 
+    <!-- For Employers checklist and explanatory paragraph removed; NEED.png and button retained -->
 </body>
 </html>
