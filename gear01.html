@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GEAR01 | Integrated Sections - LogiCoreGear</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .gradient-orange { background: linear-gradient(135deg, #fb923c 0%, #ea580c 100%); }
+        .gradient-blue { background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%); }
+        .step-number { -webkit-text-stroke: 1px rgba(255,255,255,0.3); color: transparent; font-size: 8rem; line-height: 1; }
+    
+/* ===== Scoped styles imported from gear01_flow_sections_5.html ===== */
+.flow-sections-scope {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.65;
+}
+.flow-sections-scope * {
+  box-sizing: border-box;
+}
+
+    .flow-sections-scope{
+      --navy:#133b63;
+      --blue:#2a6fa8;
+      --blue-soft:#edf5fb;
+      --sky:#f6fbff;
+      --orange:#f28b2f;
+      --orange-soft:#fff4e8;
+      --green:#2f9d69;
+      --red:#cf3e36;
+      --text:#17324a;
+      --muted:#607286;
+      --line:#dbe6ef;
+      --bg:#ffffff;
+      --section:#fbfdff;
+      --shadow:0 12px 36px rgba(19,59,99,.10);
+      --radius:22px;
+      --radius-sm:14px;
+    }
+
+    .flow-sections-scope *{box-sizing:border-box}
+    .flow-sections-scope{scroll-behavior:smooth}
+    .flow-sections-scope{
+      margin:0;
+      font-family:'Noto Sans JP', sans-serif;
+      color:var(--text);
+      background:#fff;
+      line-height:1.65;
+    }
+
+    .flow-sections-scope .section{
+      padding:88px 20px;
+      background:linear-gradient(180deg,#ffffff 0%, var(--section) 100%);
+      border-top:1px solid #eef3f7;
+    }
+    .flow-sections-scope .section:first-of-type{border-top:none}
+    .flow-sections-scope .wrap{max-width:1180px;margin:0 auto}
+    .flow-sections-scope .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;
+      color:var(--blue);font-weight:700;font-size:14px;letter-spacing:.35em;text-transform:uppercase;
+      margin-bottom:12px;
+    }
+    .flow-sections-scope .eyebrow::before{
+      content:"";width:36px;height:3px;border-radius:999px;background:var(--orange);
+    }
+    .flow-sections-scope h2{
+      margin:0 0 18px;
+      font-size:clamp(30px,4vw,48px);
+      line-height:1.22;
+      letter-spacing:-.02em;
+      font-weight:900;
+      color:var(--navy);
+    }
+    .flow-sections-scope .sub{
+      margin:0 0 34px;
+      max-width:920px;
+      color:var(--muted);
+      font-size:clamp(16px,1.6vw,18px);
+      font-weight:500;
+    }
+    .flow-sections-scope .card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .flow-sections-scope /* Common mini UI */
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      border-radius:999px;padding:8px 14px;font-size:12px;font-weight:700;letter-spacing:.18em;
+      background:var(--blue-soft);color:var(--blue);
+    }
+    .flow-sections-scope .tag-orange{background:var(--orange-soft);color:#a45a17}
+    .flow-sections-scope .muted{color:var(--muted)}
+    .flow-sections-scope .small{font-size:14px}
+
+    .flow-sections-scope /* Section 1 */
+    .s1-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:36px;align-items:stretch}
+    .flow-sections-scope .iceberg-panel{padding:26px 26px 16px;display:flex;flex-direction:column;justify-content:center}
+    .flow-sections-scope .iceberg-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:18px}
+    .flow-sections-scope .iceberg-legend{display:flex;flex-wrap:wrap;gap:10px}
+    .flow-sections-scope .iceberg-svg{width:100%;height:auto;display:block}
+    .flow-sections-scope .issue-list{display:flex;flex-direction:column;gap:14px}
+    .flow-sections-scope .issue-card{padding:18px 18px 18px 16px;border:1px solid var(--line);border-radius:18px;background:#fff}
+    .flow-sections-scope .issue-top{display:flex;gap:14px;align-items:center}
+    .flow-sections-scope .issue-ico{
+      width:46px;
+      height:42px;
+      flex:0 0 46px;
+      display:grid;
+      place-items:center;
+      position:relative;
+      background:transparent;
+      color:#fff;
+      font-size:0;
+    }
+    .flow-sections-scope .issue-ico::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:var(--orange);
+      clip-path:polygon(50% 0, 100% 100%, 0 100%);
+      filter:drop-shadow(0 6px 10px rgba(242,139,47,.22));
+    }
+    .flow-sections-scope .issue-ico::after{
+      content:"!";
+      position:relative;
+      z-index:1;
+      transform:translateY(5px);
+      font-size:22px;
+      line-height:1;
+      font-weight:900;
+      color:#fff;
+    }
+    .flow-sections-scope .issue-title{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:4px}
+    .flow-sections-scope .issue-desc{font-size:15px;color:var(--muted);line-height:1.6}
+    .flow-sections-scope .impact-box{margin-top:20px;padding:18px 20px;border-radius:18px;background:linear-gradient(135deg,#0f3f68,#255f92);color:#fff}
+    .flow-sections-scope .impact-box strong{display:block;font-size:17px;margin-bottom:4px}
+
+    .flow-sections-scope /* Section 2 */
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+    .flow-sections-scope .process-card{padding:26px 24px 24px;position:relative;overflow:hidden}
+    .flow-sections-scope .process-card.bad{background:linear-gradient(180deg,#fff 0%, #fff6f2 100%)}
+    .flow-sections-scope .process-card.good{background:linear-gradient(180deg,#fff 0%, #f5fbff 100%)}
+    .flow-sections-scope .process-label{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;font-weight:700;font-size:14px;margin-bottom:18px}
+    .flow-sections-scope .process-card.bad .process-label{background:#ffe6d8;color:#b95819}
+    .flow-sections-scope .process-card.good .process-label{background:#e8f3fb;color:var(--blue)}
+    .flow-sections-scope .vertical-flow{position:relative;padding-left:24px}
+    .flow-sections-scope .vertical-flow::before{content:"";position:absolute;left:15px;top:8px;bottom:8px;width:2px;background:#cfdce8}
+    .flow-sections-scope .step{position:relative;padding:0 0 18px 20px}
+    .flow-sections-scope .step:last-child{padding-bottom:0}
+    .flow-sections-scope .step::before{content:"";position:absolute;left:-18px;top:7px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid currentColor}
+    .flow-sections-scope .process-card.bad .step{color:var(--red)}
+    .flow-sections-scope .process-card.good .step{color:var(--blue)}
+    .flow-sections-scope .step-box{padding:16px 18px;border-radius:16px;background:#fff;border:1px solid var(--line);box-shadow:0 6px 18px rgba(19,59,99,.06)}
+    .flow-sections-scope .step-title{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:3px}
+    .flow-sections-scope .step-note{font-size:14px;color:var(--muted)}
+    .flow-sections-scope .compare-summary{margin-top:24px;padding:20px 22px;border-left:4px solid var(--blue);border-radius:16px;background:var(--sky);font-size:17px;font-weight:700;color:var(--navy)}
+
+    .flow-sections-scope /* Section 3 */
+    .filter-card{padding:28px}
+    .flow-sections-scope .pipeline{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:22px;align-items:center}
+    .flow-sections-scope .candidate-box, .flow-sections-scope .result-box{padding:22px;border-radius:20px;background:#fff;border:1px solid var(--line)}
+    .flow-sections-scope .candidate-box h3, .flow-sections-scope .result-box h3, .flow-sections-scope .gate-box h3{margin:0 0 12px;font-size:18px;font-weight:700;color:var(--navy)}
+    .flow-sections-scope .people-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .flow-sections-scope .avatar{height:86px;border-radius:16px;background:#f2f6fa;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+    .flow-sections-scope .avatar.good{background:#eef7f2}
+    .flow-sections-scope .head{width:22px;height:22px;border-radius:50%;background:#9baab7}
+    .flow-sections-scope .avatar.good .head{background:var(--green)}
+    .flow-sections-scope .body{width:34px;height:24px;border-radius:14px 14px 8px 8px;background:#9baab7}
+    .flow-sections-scope .avatar.good .body{background:var(--green)}
+    .flow-sections-scope .status{font-size:12px;font-weight:700;color:var(--muted)}
+    .flow-sections-scope .gate-box{position:relative;padding:26px 18px;border-radius:24px;background:linear-gradient(180deg,#fffaf5 0%, #fff 100%);border:1px solid #f3d7bd;text-align:center}
+    .flow-sections-scope .gate-visual{display:flex;justify-content:center;align-items:center;gap:18px;margin:14px 0 10px}
+    .flow-sections-scope .funnel-shell{width:170px;height:220px;position:relative}
+    .flow-sections-scope .funnel-shell svg{width:100%;height:100%}
+    .flow-sections-scope .gate-caption{font-size:15px;color:var(--muted);font-weight:500;line-height:1.65}
+    .flow-sections-scope .risk-callout{margin-top:14px;background:var(--orange-soft);color:#995516;border-radius:14px;padding:12px 14px;font-weight:700;font-size:14px}
+    .flow-sections-scope .flow-mini{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:20px}
+    .flow-sections-scope .mini{padding:14px 12px;border-radius:14px;background:#fff;border:1px solid var(--line);text-align:center;font-size:13px;font-weight:700;color:var(--navy);line-height:1.45}
+    .flow-sections-scope .mini b{display:block;font-size:12px;color:var(--blue);letter-spacing:.05em;margin-bottom:6px}
+    .flow-sections-scope .message{margin-top:18px;padding:18px 20px;border-radius:18px;background:linear-gradient(135deg,#f8fbfe,#eef6fb);border:1px solid var(--line);font-size:18px;font-weight:700;color:var(--navy);text-align:center}
+    .flow-sections-scope .message .em{color:var(--orange)}
+
+    .flow-sections-scope /* Section 4 */
+    .matrix-card{padding:28px}
+    .flow-sections-scope .matrix-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+    .flow-sections-scope .matrix-grid{display:grid;grid-template-columns:160px 1fr 1fr;grid-template-rows:auto auto auto;gap:14px;align-items:stretch}
+    .flow-sections-scope .axis-empty{background:transparent;border:none;box-shadow:none}
+    .flow-sections-scope .axis-top, .flow-sections-scope .axis-side{display:grid;place-items:center;border-radius:16px;font-weight:700;color:var(--navy);background:#f4f8fb;border:1px solid var(--line);padding:16px;text-align:center}
+    .flow-sections-scope .matrix-item{padding:20px 18px;border-radius:18px;background:#fff;border:1px solid var(--line)}
+    .flow-sections-scope .matrix-item h4{margin:0 0 8px;font-size:18px;font-weight:700;color:var(--navy)}
+    .flow-sections-scope .matrix-item p{margin:0;font-size:14px;color:var(--muted);line-height:1.7}
+    .flow-sections-scope .matrix-item.highlight{border:2px solid var(--orange);background:linear-gradient(180deg,#fffaf5 0%, #fff 100%);box-shadow:0 10px 24px rgba(242,139,47,.15)}
+    .flow-sections-scope .matrix-badge{display:inline-block;margin-bottom:10px;padding:6px 10px;border-radius:999px;background:var(--orange-soft);color:#a45a17;font-size:12px;font-weight:900;letter-spacing:.04em}
+    .flow-sections-scope .strategy{margin-top:20px;padding:20px 22px;border-radius:18px;background:linear-gradient(135deg,#143a61,#2a6fa8);color:#fff;font-size:17px;font-weight:700;line-height:1.7}
+    .flow-sections-scope .strategy strong{color:#ffd8b4}
+
+    @media (max-width:980px){
+      .flow-sections-scope .s1-grid, .flow-sections-scope .compare-grid, .flow-sections-scope .pipeline{grid-template-columns:1fr}
+      .flow-sections-scope .matrix-grid{grid-template-columns:1fr;grid-template-rows:auto}
+      .flow-sections-scope .axis-empty{display:none}
+      .flow-sections-scope .flow-mini{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:640px){
+      .flow-sections-scope .section{padding:68px 16px}
+      .flow-sections-scope .flow-mini, .flow-sections-scope .people-grid{grid-template-columns:1fr 1fr}
+      .flow-sections-scope .avatar{height:78px}
+    }
+  
+.flow-sections-scope /* Imported WHY LCG section from enhanced design */
+.lcg-filter{
+  position:relative;
+  overflow:hidden;
+  padding:92px 20px;
+  background-color:#f8fbfd;
+  background-image:
+    radial-gradient(circle at 12% 10%, rgba(15,95,137,.09), transparent 28%),
+    radial-gradient(circle at 88% 18%, rgba(241,138,27,.12), transparent 24%);
+  border-top:1px solid #e5edf3;
+}
+.flow-sections-scope .lcg-filter .wrap{max-width:1180px;margin:0 auto;position:relative;z-index:1}
+.flow-sections-scope .lcg-filter .eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  color:#0f5f89;font-size:14px;font-weight:700;letter-spacing:.35em;text-transform:uppercase;
+  margin-bottom:14px;
+}
+.flow-sections-scope .lcg-filter .eyebrow::before{content:"";width:38px;height:3px;border-radius:999px;background:#f18a1b}
+.flow-sections-scope .lcg-filter h2{
+  margin:0 0 34px;
+  color:#062f49;
+  font-size:clamp(30px,4vw,48px);
+  line-height:1.22;
+  letter-spacing:-.02em;
+  font-weight:900;
+}
+.flow-sections-scope .lcg-filter .lead{
+  margin:-16px 0 38px;
+  max-width:930px;
+  color:#1c3448;
+  font-size:clamp(16px,1.6vw,18px);
+  line-height:1.8;
+  font-weight:500;
+}
+.flow-sections-scope .lcg-filter .glass-card{
+  background:rgba(255,255,255,.9);
+  border:1px solid rgba(7,50,74,.12);
+  border-radius:28px;
+  box-shadow:0 20px 46px rgba(7,50,74,.17);
+  backdrop-filter:blur(12px);
+}
+.flow-sections-scope .lcg-filter .filter-card{padding:34px 38px 30px;overflow:hidden}
+.flow-sections-scope .lcg-filter .filter-visual{position:relative;min-height:456px;display:grid;grid-template-columns:.9fr 1.75fr 1fr;align-items:center;gap:4px}
+.flow-sections-scope .lcg-filter .people-cloud, .flow-sections-scope .lcg-filter .trained-cloud{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:center;justify-items:center}
+.flow-sections-scope .lcg-filter .person{width:55px;height:73px;position:relative;opacity:.58;filter:drop-shadow(0 8px 10px rgba(7,50,74,.08))}
+.flow-sections-scope .lcg-filter .person::before{content:"";position:absolute;left:14px;top:0;width:27px;height:27px;border-radius:50%;background:currentColor}
+.flow-sections-scope .lcg-filter .person::after{content:"";position:absolute;left:0;bottom:0;width:55px;height:35px;background:currentColor;border-radius:28px 28px 8px 8px}
+.flow-sections-scope .lcg-filter .people-cloud{color:#7a858e}
+.flow-sections-scope .lcg-filter .trained-cloud{color:#061a4a}
+.flow-sections-scope .lcg-filter .trained-cloud .person{opacity:.88}
+.flow-sections-scope .lcg-filter .funnel-svg{width:100%;height:342px;overflow:visible}
+.flow-sections-scope .lcg-filter .filter-ring{filter:drop-shadow(0 0 19px rgba(241,90,0,.62)) drop-shadow(0 8px 12px rgba(7,50,74,.12))}
+.flow-sections-scope .lcg-filter .step-note{display:grid;grid-template-columns:repeat(5,1fr);gap:15px;margin-top:18px;text-align:center;font-weight:700;color:#061a4a;font-size:15px;line-height:1.5}
+.flow-sections-scope .lcg-filter .step-note>div{
+  background:#fff;
+  border:1px solid #dce7ef;
+  border-radius:15px;
+  padding:14px 11px;
+  box-shadow:0 7px 14px rgba(7,50,74,.06);
+  min-height:96px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.flow-sections-scope .lcg-filter .step-note b{display:block;font-size:12px;margin-bottom:6px;color:#0f5f89;letter-spacing:.12em;text-transform:uppercase}
+.flow-sections-scope .lcg-filter .step-note .roi{border:3px solid #071a42;background:linear-gradient(180deg,#fff,#f7fbff)}
+.flow-sections-scope .lcg-filter .roi strong{
+  display:block;
+  color:#f18a1b;
+  font-size:20px;
+  line-height:1.15;
+  letter-spacing:.04em;
+  margin-top:4px;
+}
+.flow-sections-scope .lcg-filter .filter-message{margin-top:24px;border:3px solid #071a42;border-radius:16px;background:#fff;padding:21px 24px;text-align:center;font-size:clamp(18px,1.8vw,22px);font-weight:700;color:#061a4a;box-shadow:0 10px 24px rgba(7,50,74,.10)}
+.flow-sections-scope .lcg-filter .filter-message span{color:#f18a1b}
+.flow-sections-scope .lcg-filter .truck-row{display:flex;gap:22px;justify-content:center;margin-top:24px}
+.flow-sections-scope .lcg-filter .truck{width:72px;height:43px;position:relative;color:#061a4a;filter:drop-shadow(0 8px 9px rgba(7,50,74,.13))}
+.flow-sections-scope .lcg-filter .truck::before{content:"";position:absolute;left:0;top:10px;width:43px;height:25px;background:currentColor;border-radius:3px}
+.flow-sections-scope .lcg-filter .truck::after{content:"";position:absolute;right:0;top:15px;width:26px;height:20px;background:currentColor;clip-path:polygon(0 0,70% 0,100% 48%,100% 100%,0 100%)}
+.flow-sections-scope .lcg-filter .wheel{position:absolute;bottom:0;width:11px;height:11px;border-radius:50%;background:#fff;border:4px solid currentColor}
+.flow-sections-scope .lcg-filter .wheel.w1{left:10px}
+.flow-sections-scope .lcg-filter .wheel.w2{right:9px}
+@media (max-width:960px){
+  .flow-sections-scope .lcg-filter{padding:72px 16px}
+  .flow-sections-scope .lcg-filter .filter-visual{grid-template-columns:1fr;gap:26px;min-height:0}
+  .flow-sections-scope .lcg-filter .funnel-svg{height:245px}
+  .flow-sections-scope .lcg-filter .step-note{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .flow-sections-scope .lcg-filter .step-note{grid-template-columns:1fr}
+  .flow-sections-scope .lcg-filter .people-cloud, .flow-sections-scope .lcg-filter .trained-cloud{grid-template-columns:repeat(3,72px);justify-content:center}
+}
+
+    .flow-sections-scope /* Contact section matched to this page design */
+    .contact-section{
+      padding:48px 20px;
+      background:linear-gradient(180deg,#ffffff 0%, var(--section) 100%);
+      border-top:1px solid #eef3f7;
+    }
+    .flow-sections-scope .contact-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:28px;
+      padding:36px 32px;
+      text-align:center;
+      background:linear-gradient(135deg,#143a61,#2a6fa8);
+      color:#fff;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(255,255,255,.18);
+    }
+    .flow-sections-scope .contact-card::before{
+      content:"";
+      position:absolute;
+      width:260px;
+      height:260px;
+      right:-90px;
+      top:-100px;
+      border-radius:999px;
+      background:rgba(242,139,47,.22);
+      filter:blur(4px);
+    }
+    .flow-sections-scope .contact-card::after{
+      content:"";
+      position:absolute;
+      width:220px;
+      height:220px;
+      left:-90px;
+      bottom:-100px;
+      border-radius:999px;
+      background:rgba(255,255,255,.12);
+      filter:blur(4px);
+    }
+    .flow-sections-scope .contact-eyebrow{
+      position:relative;
+      z-index:1;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:#dff1fb;
+      font-weight:700;
+      font-size:14px;
+      letter-spacing:.35em;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+    .flow-sections-scope .contact-eyebrow::before{
+      content:"";
+      width:36px;
+      height:3px;
+      border-radius:999px;
+      background:var(--orange);
+    }
+    .flow-sections-scope .contact-title{
+      position:relative;
+      z-index:1;
+      margin:0 0 18px;
+      color:#fff;
+      font-size:clamp(30px,4vw,48px);
+      line-height:1.22;
+      letter-spacing:-.02em;
+      font-weight:900;
+    }
+    .flow-sections-scope .contact-text{
+      position:relative;
+      z-index:1;
+      max-width:760px;
+      margin:0 auto 24px;
+      color:#e6f2fb;
+      font-size:clamp(16px,1.6vw,18px);
+      line-height:1.8;
+      font-weight:500;
+    }
+    .flow-sections-scope .contact-btn{
+      position:relative;
+      z-index:1;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      min-width:180px;
+      padding:15px 34px;
+      border-radius:999px;
+      background:var(--orange);
+      color:#fff;
+      text-decoration:none;
+      font-size:16px;
+      font-weight:700;
+      box-shadow:0 16px 32px rgba(242,139,47,.28);
+      transition:transform .25s ease, background .25s ease, box-shadow .25s ease;
+    }
+    .flow-sections-scope .contact-btn:hover{
+      background:#d96f0d;
+      transform:translateY(-2px);
+      box-shadow:0 20px 38px rgba(242,139,47,.34);
+    }
+    .flow-sections-scope .site-footer{
+      background:#0f2538;
+      color:#b8c7d5;
+      text-align:center;
+      padding:34px 20px;
+      font-size:13px;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+    .flow-sections-scope .site-footer p{margin:0;}
+
+  
+    .flow-sections-scope /* Cost support matrix adjustment */
+    .axis-top-regional{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .flow-sections-scope .matrix-badge-header{
+      margin:0;
+      flex:0 0 auto;
+      white-space:nowrap;
+      transform:translateY(0);
+    }
+    .flow-sections-scope .matrix-grid{
+      grid-template-rows:auto minmax(132px, auto) minmax(132px, auto);
+    }
+    .flow-sections-scope .axis-side, .flow-sections-scope .matrix-item{
+      min-height:132px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    .flow-sections-scope .matrix-item h4{
+      margin-top:0;
+    }
+    .flow-sections-scope .matrix-item p{
+      margin-bottom:0;
+    }
+    @media (max-width:980px){
+      .flow-sections-scope .axis-side, .flow-sections-scope .matrix-item{
+        min-height:auto;
+      }
+      .flow-sections-scope .axis-top-regional{
+        justify-content:center;
+      }
+    }
+
+  
+/* ===== End scoped imported styles ===== */
+
+
+/* ===== hard fix: WHY LCG filter section ===== */
+.gear-section.lcg-filter,
+.flow-sections-scope .gear-section.lcg-filter{
+  position:relative;
+  overflow:hidden;
+  padding:92px 20px;
+  background-color:#f8fbfd;
+  background-image:
+    radial-gradient(circle at 12% 10%, rgba(15,95,137,.09), transparent 28%),
+    radial-gradient(circle at 88% 18%, rgba(241,138,27,.12), transparent 24%);
+  border-top:1px solid #e5edf3;
+}
+.gear-section.lcg-filter .wrap,
+.flow-sections-scope .gear-section.lcg-filter .wrap{
+  max-width:1180px;
+  margin:0 auto;
+  position:relative;
+  z-index:1;
+}
+.gear-section.lcg-filter .eyebrow,
+.flow-sections-scope .gear-section.lcg-filter .eyebrow{
+  display:inline-flex !important;
+  align-items:center;
+  gap:9px;
+  color:#0f5f89;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:.35em;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+.gear-section.lcg-filter .eyebrow::before,
+.flow-sections-scope .gear-section.lcg-filter .eyebrow::before{
+  content:"";
+  width:38px;
+  height:3px;
+  border-radius:999px;
+  background:#f18a1b;
+}
+.gear-section.lcg-filter h2,
+.flow-sections-scope .gear-section.lcg-filter h2{
+  margin:0 0 34px;
+  color:#062f49;
+  font-size:clamp(30px,4vw,48px);
+  line-height:1.22;
+  letter-spacing:-.02em;
+  font-weight:900;
+}
+.gear-section.lcg-filter .lead,
+.flow-sections-scope .gear-section.lcg-filter .lead{
+  margin:-16px 0 38px;
+  max-width:930px;
+  color:#1c3448;
+  font-size:clamp(16px,1.6vw,18px);
+  line-height:1.8;
+  font-weight:500;
+}
+.gear-section.lcg-filter .glass-card,
+.flow-sections-scope .gear-section.lcg-filter .glass-card{
+  background:rgba(255,255,255,.9);
+  border:1px solid rgba(7,50,74,.12);
+  border-radius:28px;
+  box-shadow:0 20px 46px rgba(7,50,74,.17);
+  backdrop-filter:blur(12px);
+}
+.gear-section.lcg-filter .filter-card,
+.flow-sections-scope .gear-section.lcg-filter .filter-card{
+  padding:34px 38px 30px;
+  overflow:hidden;
+}
+.gear-section.lcg-filter .filter-visual,
+.flow-sections-scope .gear-section.lcg-filter .filter-visual{
+  position:relative;
+  min-height:456px;
+  display:grid !important;
+  grid-template-columns:.9fr 1.75fr 1fr;
+  align-items:center;
+  gap:4px;
+}
+.gear-section.lcg-filter .people-cloud,
+.gear-section.lcg-filter .trained-cloud,
+.flow-sections-scope .gear-section.lcg-filter .people-cloud,
+.flow-sections-scope .gear-section.lcg-filter .trained-cloud{
+  display:grid !important;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  align-items:center;
+  justify-items:center;
+}
+.gear-section.lcg-filter .person,
+.flow-sections-scope .gear-section.lcg-filter .person{
+  width:55px;
+  height:73px;
+  position:relative;
+  opacity:.58;
+  filter:drop-shadow(0 8px 10px rgba(7,50,74,.08));
+}
+.gear-section.lcg-filter .person::before,
+.flow-sections-scope .gear-section.lcg-filter .person::before{
+  content:"";
+  position:absolute;
+  left:14px;
+  top:0;
+  width:27px;
+  height:27px;
+  border-radius:50%;
+  background:currentColor;
+}
+.gear-section.lcg-filter .person::after,
+.flow-sections-scope .gear-section.lcg-filter .person::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:55px;
+  height:35px;
+  background:currentColor;
+  border-radius:28px 28px 8px 8px;
+}
+.gear-section.lcg-filter .people-cloud,
+.flow-sections-scope .gear-section.lcg-filter .people-cloud{color:#7a858e}
+.gear-section.lcg-filter .trained-cloud,
+.flow-sections-scope .gear-section.lcg-filter .trained-cloud{color:#061a4a}
+.gear-section.lcg-filter .trained-cloud .person,
+.flow-sections-scope .gear-section.lcg-filter .trained-cloud .person{opacity:.88}
+.gear-section.lcg-filter .funnel-svg,
+.flow-sections-scope .gear-section.lcg-filter .funnel-svg{
+  width:100% !important;
+  height:342px !important;
+  max-height:342px !important;
+  display:block;
+  overflow:visible;
+}
+.gear-section.lcg-filter .filter-ring,
+.flow-sections-scope .gear-section.lcg-filter .filter-ring{
+  filter:drop-shadow(0 0 19px rgba(241,90,0,.62)) drop-shadow(0 8px 12px rgba(7,50,74,.12));
+}
+.gear-section.lcg-filter .step-note,
+.flow-sections-scope .gear-section.lcg-filter .step-note{
+  display:grid !important;
+  grid-template-columns:repeat(5,1fr);
+  gap:15px;
+  margin-top:18px;
+  text-align:center;
+  font-weight:700;
+  color:#061a4a;
+  font-size:15px;
+  line-height:1.5;
+}
+.gear-section.lcg-filter .step-note>div,
+.flow-sections-scope .gear-section.lcg-filter .step-note>div{
+  background:#fff;
+  border:1px solid #dce7ef;
+  border-radius:15px;
+  padding:14px 11px;
+  box-shadow:0 7px 14px rgba(7,50,74,.06);
+  min-height:96px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.gear-section.lcg-filter .step-note b,
+.flow-sections-scope .gear-section.lcg-filter .step-note b{
+  display:block;
+  font-size:12px;
+  margin-bottom:6px;
+  color:#0f5f89;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.gear-section.lcg-filter .step-note .roi,
+.flow-sections-scope .gear-section.lcg-filter .step-note .roi{
+  border:3px solid #071a42;
+  background:linear-gradient(180deg,#fff,#f7fbff);
+}
+.gear-section.lcg-filter .roi strong,
+.flow-sections-scope .gear-section.lcg-filter .roi strong{
+  display:block;
+  color:#f18a1b;
+  font-size:20px;
+  line-height:1.15;
+  letter-spacing:.04em;
+  margin-top:4px;
+}
+.gear-section.lcg-filter .filter-message,
+.flow-sections-scope .gear-section.lcg-filter .filter-message{
+  margin-top:24px;
+  border:3px solid #071a42;
+  border-radius:16px;
+  background:#fff;
+  padding:21px 24px;
+  text-align:center;
+  font-size:clamp(18px,1.8vw,22px);
+  font-weight:700;
+  color:#061a4a;
+  box-shadow:0 10px 24px rgba(7,50,74,.10);
+}
+.gear-section.lcg-filter .filter-message span,
+.flow-sections-scope .gear-section.lcg-filter .filter-message span{color:#f18a1b}
+.gear-section.lcg-filter .truck-row,
+.flow-sections-scope .gear-section.lcg-filter .truck-row{
+  display:flex;
+  gap:22px;
+  justify-content:center;
+  margin-top:24px;
+}
+.gear-section.lcg-filter .truck,
+.flow-sections-scope .gear-section.lcg-filter .truck{
+  width:72px;
+  height:43px;
+  position:relative;
+  color:#061a4a;
+  filter:drop-shadow(0 8px 9px rgba(7,50,74,.13));
+}
+.gear-section.lcg-filter .truck::before,
+.flow-sections-scope .gear-section.lcg-filter .truck::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:10px;
+  width:43px;
+  height:25px;
+  background:currentColor;
+  border-radius:3px;
+}
+.gear-section.lcg-filter .truck::after,
+.flow-sections-scope .gear-section.lcg-filter .truck::after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:15px;
+  width:26px;
+  height:20px;
+  background:currentColor;
+  clip-path:polygon(0 0,70% 0,100% 48%,100% 100%,0 100%);
+}
+.gear-section.lcg-filter .wheel,
+.flow-sections-scope .gear-section.lcg-filter .wheel{
+  position:absolute;
+  bottom:0;
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  background:#fff;
+  border:4px solid currentColor;
+}
+.gear-section.lcg-filter .wheel.w1,
+.flow-sections-scope .gear-section.lcg-filter .wheel.w1{left:10px}
+.gear-section.lcg-filter .wheel.w2,
+.flow-sections-scope .gear-section.lcg-filter .wheel.w2{right:9px}
+@media (max-width:960px){
+  .gear-section.lcg-filter,
+  .flow-sections-scope .gear-section.lcg-filter{padding:72px 16px}
+  .gear-section.lcg-filter .filter-visual,
+  .flow-sections-scope .gear-section.lcg-filter .filter-visual{
+    grid-template-columns:1fr;
+    gap:26px;
+    min-height:0;
+  }
+  .gear-section.lcg-filter .funnel-svg,
+  .flow-sections-scope .gear-section.lcg-filter .funnel-svg{height:245px !important}
+  .gear-section.lcg-filter .step-note,
+  .flow-sections-scope .gear-section.lcg-filter .step-note{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .gear-section.lcg-filter .step-note,
+  .flow-sections-scope .gear-section.lcg-filter .step-note{grid-template-columns:1fr}
+  .gear-section.lcg-filter .people-cloud,
+  .gear-section.lcg-filter .trained-cloud,
+  .flow-sections-scope .gear-section.lcg-filter .people-cloud,
+  .flow-sections-scope .gear-section.lcg-filter .trained-cloud{
+    grid-template-columns:repeat(3,72px);
+    justify-content:center;
+  }
+}
+/* ===== end hard fix ===== */
+
+
+/* ===== hard fix: COST SUPPORT matrix ===== */
+.cost-support-section,
+.flow-sections-scope .cost-support-section{
+  padding:88px 20px;
+  background:linear-gradient(180deg,#ffffff 0%, #fbfdff 100%);
+  border-top:1px solid #eef3f7;
+}
+.cost-support-section .wrap,
+.flow-sections-scope .cost-support-section .wrap{
+  max-width:1180px;
+  margin:0 auto;
+}
+.cost-support-section .eyebrow,
+.flow-sections-scope .cost-support-section .eyebrow{
+  display:inline-flex !important;
+  align-items:center;
+  gap:10px;
+  color:#2a6fa8;
+  font-weight:700;
+  font-size:14px;
+  letter-spacing:.35em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+.cost-support-section .eyebrow::before,
+.flow-sections-scope .cost-support-section .eyebrow::before{
+  content:"";
+  width:36px;
+  height:3px;
+  border-radius:999px;
+  background:#f28b2f;
+}
+.cost-support-section h2,
+.flow-sections-scope .cost-support-section h2{
+  margin:0 0 18px;
+  font-size:clamp(30px,4vw,48px);
+  line-height:1.22;
+  letter-spacing:-.02em;
+  font-weight:900;
+  color:#133b63;
+}
+.cost-support-section .sub,
+.flow-sections-scope .cost-support-section .sub{
+  margin:0 0 34px;
+  max-width:920px;
+  color:#607286;
+  font-size:clamp(16px,1.6vw,18px);
+  font-weight:500;
+  line-height:1.8;
+}
+.cost-support-section .card,
+.flow-sections-scope .cost-support-section .card{
+  background:#fff;
+  border:1px solid #dbe6ef;
+  border-radius:22px;
+  box-shadow:0 12px 36px rgba(19,59,99,.10);
+}
+.cost-support-section .matrix-card,
+.flow-sections-scope .cost-support-section .matrix-card{
+  padding:28px;
+}
+.cost-support-section .matrix-head,
+.flow-sections-scope .cost-support-section .matrix-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:20px;
+  flex-wrap:wrap;
+}
+.cost-support-section .pill,
+.flow-sections-scope .cost-support-section .pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  border-radius:999px;
+  padding:8px 14px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.18em;
+  background:#edf5fb;
+  color:#2a6fa8;
+}
+.cost-support-section .matrix-grid,
+.flow-sections-scope .cost-support-section .matrix-grid{
+  display:grid !important;
+  grid-template-columns:160px 1fr 1fr;
+  grid-template-rows:auto minmax(132px, auto) minmax(132px, auto);
+  gap:14px;
+  align-items:stretch;
+}
+.cost-support-section .axis-empty,
+.flow-sections-scope .cost-support-section .axis-empty{
+  background:transparent;
+  border:none;
+  box-shadow:none;
+}
+.cost-support-section .axis-top,
+.cost-support-section .axis-side,
+.flow-sections-scope .cost-support-section .axis-top,
+.flow-sections-scope .cost-support-section .axis-side{
+  display:grid;
+  place-items:center;
+  border-radius:16px;
+  font-weight:700;
+  color:#133b63;
+  background:#f4f8fb;
+  border:1px solid #dbe6ef;
+  padding:16px;
+  text-align:center;
+  min-height:132px;
+}
+.cost-support-section .axis-top,
+.flow-sections-scope .cost-support-section .axis-top{
+  min-height:auto;
+}
+.cost-support-section .axis-top-regional,
+.flow-sections-scope .cost-support-section .axis-top-regional{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.cost-support-section .small,
+.flow-sections-scope .cost-support-section .small{
+  font-size:14px;
+}
+.cost-support-section .muted,
+.flow-sections-scope .cost-support-section .muted{
+  color:#607286;
+  font-weight:500;
+}
+.cost-support-section .matrix-item,
+.flow-sections-scope .cost-support-section .matrix-item{
+  padding:20px 18px;
+  border-radius:18px;
+  background:#fff;
+  border:1px solid #dbe6ef;
+  min-height:132px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.cost-support-section .matrix-item h4,
+.flow-sections-scope .cost-support-section .matrix-item h4{
+  margin:0 0 8px;
+  font-size:18px;
+  font-weight:700;
+  color:#133b63;
+}
+.cost-support-section .matrix-item p,
+.flow-sections-scope .cost-support-section .matrix-item p{
+  margin:0;
+  font-size:14px;
+  color:#607286;
+  line-height:1.7;
+}
+.cost-support-section .matrix-item.highlight,
+.flow-sections-scope .cost-support-section .matrix-item.highlight{
+  border:2px solid #f28b2f;
+  background:linear-gradient(180deg,#fffaf5 0%, #fff 100%);
+  box-shadow:0 10px 24px rgba(242,139,47,.15);
+}
+.cost-support-section .matrix-badge,
+.flow-sections-scope .cost-support-section .matrix-badge{
+  display:inline-block;
+  margin-bottom:10px;
+  padding:6px 10px;
+  border-radius:999px;
+  background:#fff4e8;
+  color:#a45a17;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.04em;
+}
+.cost-support-section .matrix-badge-header,
+.flow-sections-scope .cost-support-section .matrix-badge-header{
+  margin:0;
+  flex:0 0 auto;
+  white-space:nowrap;
+}
+.cost-support-section .strategy,
+.flow-sections-scope .cost-support-section .strategy{
+  margin-top:20px;
+  padding:20px 22px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#143a61,#2a6fa8);
+  color:#fff;
+  font-size:17px;
+  font-weight:700;
+  line-height:1.7;
+}
+.cost-support-section .strategy strong,
+.flow-sections-scope .cost-support-section .strategy strong{
+  color:#ffd8b4;
+}
+@media (max-width:980px){
+  .cost-support-section .matrix-grid,
+  .flow-sections-scope .cost-support-section .matrix-grid{
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
+  }
+  .cost-support-section .axis-empty,
+  .flow-sections-scope .cost-support-section .axis-empty{
+    display:none;
+  }
+  .cost-support-section .axis-side,
+  .cost-support-section .matrix-item,
+  .flow-sections-scope .cost-support-section .axis-side,
+  .flow-sections-scope .cost-support-section .matrix-item{
+    min-height:auto;
+  }
+}
+/* ===== end COST SUPPORT fix ===== */
+
+
+/* Tighten spacing around the detailed process section */
+.flow-sections-scope .timeline-before-process{
+  padding-bottom:48px !important;
+}
+#process{
+  scroll-margin-top:96px;
+}
+@media (max-width:768px){
+  #process{
+    padding-top:48px !important;
+    padding-bottom:72px !important;
+  }
+}
+
+
+/* Mobile: simplify the iceberg illustration in the hidden sunk-cost section */
+@media (max-width:640px){
+  .flow-sections-scope .iceberg-panel{
+    padding:18px 14px 16px !important;
+  }
+
+  .flow-sections-scope .iceberg-head{
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:10px !important;
+    margin-bottom:12px !important;
+  }
+
+  .flow-sections-scope .iceberg-legend{
+    gap:8px !important;
+  }
+
+  .flow-sections-scope .iceberg-legend .pill{
+    font-size:11px !important;
+    padding:7px 10px !important;
+    letter-spacing:.08em !important;
+  }
+
+  .flow-sections-scope .iceberg-svg{
+    height:300px !important;
+    max-height:300px !important;
+    object-fit:contain !important;
+  }
+
+  /* Hide detailed callouts on mobile because they become cramped */
+  .flow-sections-scope .iceberg-svg text,
+  .flow-sections-scope .iceberg-svg circle,
+  .flow-sections-scope .iceberg-svg line:not(:first-of-type){
+    display:none !important;
+  }
+}
+
+
+/* Mobile: keep the main GEAR01 title on one line */
+@media (max-width:640px){
+  body > section.pt-40.pb-24 h1{
+    white-space:nowrap !important;
+    font-size:1.75rem !important;
+    line-height:1.2 !important;
+    letter-spacing:-0.04em !important;
+  }
+}
+
+
+/* Mobile: keep the process section title on one line */
+@media (max-width:640px){
+  #process h2,
+  .flow-sections-scope #process h2{
+    white-space:nowrap !important;
+    font-size:1.55rem !important;
+    line-height:1.25 !important;
+    letter-spacing:-0.05em !important;
+  }
+}
+
+
+/* Mobile: make process steps 07 and 08 use the full width */
+@media (max-width:640px){
+  #process .process-mobile-full-row,
+  .flow-sections-scope #process .process-mobile-full-row{
+    grid-column:1 / -1 !important;
+    border-right:0 !important;
+    padding:18px 16px !important;
+    gap:14px !important;
+    align-items:flex-start !important;
+  }
+
+  #process .process-mobile-full-row h4,
+  .flow-sections-scope #process .process-mobile-full-row h4{
+    font-size:1rem !important;
+    line-height:1.45 !important;
+  }
+
+  #process .process-mobile-full-row p,
+  .flow-sections-scope #process .process-mobile-full-row p{
+    line-height:1.75 !important;
+  }
+}
+
+</style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+<nav class="fixed top-0 left-0 w-full z-[100] bg-white/95 backdrop-blur-md border-b border-slate-200">
+<div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+<!-- Logo -->
+<div class="flex items-center">
+<a class="flex items-center group" href="index.html">
+<img alt="LogiCoreGear Logo" class="h-10 w-auto" src="logo.png"/>
+<span class="ml-3 text-xl font-bold text-slate-900 group-hover:text-blue-600 transition tracking-tight">
+                    LogiCoreGear
+                </span>
+</a>
+</div>
+<!-- Desktop Menu -->
+<div class="hidden md:flex items-center space-x-9 text-sm font-semibold text-slate-600">
+<a class="hover:text-blue-600 transition" href="index.html">
+                Home
+            </a>
+<a class="hover:text-blue-600 transition" href="index.html#challenges">
+                解決する課題
+            </a>
+<a class="hover:text-blue-600 transition" href="gear01.html">
+                GEAR01：採用までのフロー
+            </a>
+<a class="hover:text-blue-600 transition" href="index.html#company">
+                会社概要
+            </a>
+<a class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg transition shadow-lg shadow-blue-500/20" href="index.html#contact">
+                お問い合わせ
+            </a>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="md:hidden">
+<button aria-label="メニューを開く" class="text-slate-600">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</nav>
+<section class="pt-40 pb-24 bg-slate-900 text-white relative overflow-hidden">
+<div class="absolute inset-0 opacity-20">
+<img alt="" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&amp;fit=crop&amp;w=2000"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-br from-slate-950/80 via-slate-900/80 to-blue-950/60"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+<span class="text-orange-500 font-bold tracking-[0.4em] uppercase mb-4 block">GEAR 01</span>
+<h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight">
+                採用・免許取得サポート
+            </h1>
+<p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-8">
+                外国人ドライバーの採用から免許取得・就労開始まで、<br class="hidden md:block"/>
+                LCGがワンストップでサポートします。
+            </p>
+<div class="inline-flex items-center justify-center bg-orange-500/15 border border-orange-500/40 text-orange-300 px-8 py-3 rounded-full font-black tracking-wide">
+                海外からの採用：最短 約7ヶ月で就労開始
+            </div>
+</div>
+</section>
+<section class="py-24 bg-white">
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center mb-14">
+<span class="text-blue-600 font-bold tracking-[0.4em] block mb-4 uppercase">WHY LCG</span>
+<h2 class="text-3xl md:text-5xl font-black text-slate-900">LCGが選ばれる3つの理由</h2>
+<p class="text-slate-600 mt-6 max-w-3xl mx-auto leading-relaxed">
+                LCGは、見えにくい採用リスクを可視化し、時間軸を前倒しし、
+                入国前の段階で安全にふるい分ける仕組みを整えています。
+            </p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-lg">
+<div class="relative h-48 bg-slate-50 flex items-center justify-center overflow-hidden p-1">
+<div class="absolute top-1 left-1/2 -translate-x-1/2 z-20 text-[14px] font-black tracking-[0.22em] text-blue-700 uppercase whitespace-nowrap">
+        SUNK COST
+    </div>
+<div class="w-full h-full rounded-xl overflow-hidden bg-[#f6fbff] border border-slate-200">
+<svg aria-hidden="true" class="w-full h-full" preserveaspectratio="none" viewbox="0 0 320 192">
+<defs>
+<lineargradient id="miniSeaGrad2" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#dff1fb"></stop>
+<stop offset="45%" stop-color="#71b2dc"></stop>
+<stop offset="100%" stop-color="#1f5f92"></stop>
+</lineargradient>
+<lineargradient id="miniIceTop2" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0%" stop-color="#ffffff"></stop>
+<stop offset="100%" stop-color="#dfeaf3"></stop>
+</lineargradient>
+<lineargradient id="miniIceBottom2" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0%" stop-color="#96c6e7"></stop>
+<stop offset="100%" stop-color="#2a6fa8"></stop>
+</lineargradient>
+</defs>
+<rect fill="#f6fbff" height="192" width="320"></rect>
+<rect fill="url(#miniSeaGrad2)" height="92" width="320" y="100"></rect>
+<line opacity="0.85" stroke="#ffffff" stroke-width="3" x1="0" x2="320" y1="100" y2="100"></line>
+<path d="M134 36 L204 96 L102 96 Z" fill="url(#miniIceTop2)" stroke="#d9e6f0" stroke-width="2"></path>
+<path d="M100 104 L214 104 L238 126 L222 178 L166 188 L108 160 L84 124 Z" fill="url(#miniIceBottom2)" opacity="0.97"></path>
+<path d="M100 104 L214 104" opacity="0.6" stroke="#ffffff" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<div class="p-8">
+<p class="text-slate-600 text-base leading-relaxed">
+                        見える部分よりも見えないところに落とし穴はあります。
+                    </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-lg">
+<div class="relative h-48 bg-gradient-to-br from-orange-50 via-white to-blue-50 flex items-center justify-center overflow-hidden">
+<div class="absolute top-1 left-1/2 -translate-x-1/2 z-10 text-[14px] font-black tracking-[0.22em] text-orange-600 uppercase whitespace-nowrap">
+                        Process
+                    </div>
+<img alt="構造的な転換" class="max-w-none w-[100%] h-auto object-contain" src="img_arrow.png"/>
+</div>
+<div class="p-8">
+<p class="text-slate-600 text-base leading-relaxed">
+                        構造的な転換により、ドライバー採用を一新します。
+                    </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-lg">
+<div class="relative h-48 bg-gradient-to-br from-slate-100 via-white to-orange-50 flex items-center justify-center overflow-hidden">
+<div class="absolute top-1 left-1/2 -translate-x-1/2 z-10 text-[14px] font-black tracking-[0.22em] text-black uppercase whitespace-nowrap">
+                       Filter
+                    </div>
+<img alt="安全フィルター" class="max-w-none w-[100%] h-auto object-contain" src="img_filter.png"/>
+</div>
+<div class="p-8">
+<p class="text-slate-600 text-base leading-relaxed">
+                        ドライバーとしての能力に満たない生徒は入国させません。
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Moved WHY IT MATTERS iceberg section -->
+<div class="flow-sections-scope">
+<section class="section">
+<div class="wrap">
+<div class="eyebrow">WHY IT MATTERS</div>
+<h2>外国人ドライバー採用に潜む“隠れたサンクコスト”</h2>
+<p class="sub">氷山のように、見えている費用よりも、見えない損失のほうが大きい。面接だけでは判断しきれないリスクが、<br class="hidden sm:block"/>入国後に一気に顕在化します。</p>
+<div class="s1-grid">
+<div class="card iceberg-panel">
+<div class="iceberg-head">
+<div>
+<div class="pill">Visible vs Hidden Cost</div>
+</div>
+<div class="iceberg-legend">
+<span class="pill tag-orange">見える費用 20%</span>
+<span class="pill">見えない損失 80%</span>
+</div>
+</div>
+<svg aria-label="氷山のコスト図" class="iceberg-svg" role="img" viewbox="0 0 720 570">
+<defs>
+<lineargradient id="seaGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#dff1fb"></stop>
+<stop offset="45%" stop-color="#71b2dc"></stop>
+<stop offset="100%" stop-color="#1f5f92"></stop>
+</lineargradient>
+<lineargradient id="iceGrad" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0%" stop-color="#ffffff"></stop>
+<stop offset="100%" stop-color="#dfeaf3"></stop>
+</lineargradient>
+<lineargradient id="iceBelow" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0%" stop-color="#96c6e7"></stop>
+<stop offset="100%" stop-color="#2a6fa8"></stop>
+</lineargradient>
+</defs>
+<rect fill="url(#seaGrad)" height="390" rx="20" width="720" x="0" y="180"></rect>
+<line opacity=".8" stroke="#ffffff" stroke-width="5" x1="0" x2="720" y1="180" y2="180"></line>
+<text fill="#a45a17" font-size="34" font-weight="900" x="36" y="145">20%</text>
+<text fill="#ffffff" font-size="34" font-weight="900" x="36" y="230">80%</text>
+<path d="M290 60 L430 165 L238 165 Z" fill="url(#iceGrad)" stroke="#d9e6f0" stroke-width="3"></path>
+<path d="M236 185 L468 185 L520 248 L485 470 L356 530 L238 448 L192 278 Z" fill="url(#iceBelow)" opacity=".96"></path>
+<path d="M236 185 L468 185" opacity=".65" stroke="#ffffff" stroke-width="3"></path>
+<text fill="#17324a" font-size="20" font-weight="800" x="480" y="98">面接費用</text>
+<text fill="#17324a" font-size="20" font-weight="800" x="480" y="126">ビザ申請費用</text>
+<text fill="#17324a" font-size="20" font-weight="800" x="480" y="154">送出機関への支払い</text>
+<line stroke="#9db8cc" stroke-width="2" x1="438" x2="470" y1="128" y2="128"></line>
+<circle cx="438" cy="128" fill="#9db8cc" r="5"></circle>
+<text fill="#ffffff" font-size="20" font-weight="800" x="492" y="294">ブラックボックス化</text>
+<text fill="#ffffff" font-size="20" font-weight="800" x="492" y="324">外免切替の壁</text>
+<text fill="#ffffff" font-size="20" font-weight="800" x="492" y="354">「空白の給与」問題</text>
+<line stroke="#dcecf7" stroke-width="2" x1="470" x2="490" y1="335" y2="335"></line>
+<circle cx="470" cy="335" fill="#dcecf7" r="5"></circle>
+</svg>
+</div>
+<div>
+<div class="issue-list">
+<div class="issue-card">
+<div class="issue-top">
+<div aria-hidden="true" class="issue-ico"></div>
+<div>
+<div class="issue-title">ブラックボックス化</div>
+<div class="issue-desc">面接だけでは、運転適性・忍耐力・現場対応力まで見抜けません。採用判断が属人的になり、ミスマッチの温床になります。</div>
+</div>
+</div>
+</div>
+<div class="issue-card">
+<div class="issue-top">
+<div aria-hidden="true" class="issue-ico"></div>
+<div>
+<div class="issue-title">外免切替の壁</div>
+<div class="issue-desc">入国後に一発試験で苦戦すれば、戦力化までの時間が長期化。法規・交通環境への適応にも追加コストが発生します。</div>
+</div>
+</div>
+</div>
+<div class="issue-card">
+<div class="issue-top">
+<div aria-hidden="true" class="issue-ico"></div>
+<div>
+<div class="issue-title">「空白の給与」問題</div>
+<div class="issue-desc">教習所通い・試験待機の間も、給与と住居費は発生。稼働しない人材への支払いが、数百万円規模の損失に変わります。</div>
+</div>
+</div>
+</div>
+</div>
+<div class="impact-box">
+<strong>
+  結果、採用は
+  <span style="color:#f28b2f; font-weight:900;">「人材投資」</span>
+  ではなく<span style="color:#f28b2f; font-weight:900;">「高額な賭け」</span>になりやすい。
+</strong>
+            不確実性を放置したまま入国させるほど、企業側の固定費リスクは大きくなります。
+          </div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="flow-sections-scope">
+<section class="section timeline-before-process">
+<div class="wrap">
+<div class="eyebrow">PROCESS SHIFT</div>
+<h2>タイムラインの構造的転換：<br/>「入国後」から「来日前」へ</h2>
+<p class="sub">ポイントは、教育と見極めを来日前に前倒しすること。従来方式では入国後に発生していた不確実性を、LCG方式では手前で圧縮します。</p>
+<div class="compare-grid">
+<div class="card process-card bad">
+<div class="process-label">従来方式：構造的欠陥</div>
+<div class="vertical-flow">
+<div class="step">
+<div class="step-box">
+<div class="step-title">入国</div>
+<div class="step-note">ここで初めて免許取得に向けたプロセスが始まる</div>
+</div>
+</div>
+<div class="step">
+<div class="step-box">
+<div class="step-title">1〜3ヶ月の教習所通い</div>
+<div class="step-note">現場投入前なのに時間と費用が増える</div>
+</div>
+</div>
+<div class="step">
+<div class="step-box">
+<div class="step-title">何度も不合格</div>
+<div class="step-note">運転適性が不透明なまま試験を繰り返す</div>
+</div>
+</div>
+<div class="step">
+<div class="step-box">
+<div class="step-title">莫大な待機コスト</div>
+<div class="step-note">給与・住居費・管理工数だけが積み上がる</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card process-card good">
+<div class="process-label">LCG方式：シュミレーター教習</div>
+<div class="vertical-flow">
+<div class="step">
+<div class="step-box">
+<div class="step-title">来日前シュミレーター教習</div>
+<div class="step-note">日本の免許取得に向け、事前に体験・学習</div>
+</div>
+</div>
+<div class="step">
+<div class="step-box">
+<div class="step-title">スコアで適性判断</div>
+<div class="step-note">感覚ではなく、評価データで見極める</div>
+</div>
+</div>
+<div class="step">
+<div class="step-box">
+<div class="step-title">入国</div>
+<div class="step-note">通過人材のみを受け入れる</div>
+</div>
+</div>
+<div class="step">
+<div class="step-box">
+<div class="step-title">即座に試験・現場投入</div>
+<div class="step-note">戦力化までのリードタイムを大幅短縮</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="compare-summary">最新シミュレーターと日本人プロ教官による遠隔指導を組み合わせることで、<strong>「入国後に分かる」</strong>を<strong>「来日前に分かる」</strong>へ転換します。</div>
+</div>
+</section>
+<section class="gear-section lcg-filter">
+<div class="wrap">
+<div class="eyebrow">WHY LCG</div>
+<h2>採用企業の金銭的リスクを<br/>「入口で遮断」する安全フィルター</h2>
+<p class="lead">従来サービスは、入国するまで適性がわからない。LCGは、入国前に教育と見極めを完了させ、通過人材だけを届けます。</p>
+<div class="glass-card filter-card">
+<div class="filter-visual">
+<div aria-label="海外候補者" class="people-cloud">
+<div class="person"></div><div class="person"></div><div class="person"></div>
+<div class="person"></div><div class="person"></div><div class="person"></div>
+<div class="person"></div><div class="person"></div><div class="person"></div>
+</div>
+<svg aria-label="フィルター図" class="funnel-svg" role="img" viewbox="0 0 620 330">
+<defs>
+<lineargradient id="filterGradFixed" x1="0" x2="1">
+<stop offset="0" stop-color="#ff9a2d"></stop>
+<stop offset="1" stop-color="#e85200"></stop>
+</lineargradient>
+<lineargradient id="pipeGradFixed" x1="0" x2="1">
+<stop offset="0" stop-color="#0a3550"></stop>
+<stop offset="1" stop-color="#0f5f89"></stop>
+</lineargradient>
+</defs>
+<path d="M34 50 C112 96 185 109 268 124 L398 124 C456 122 518 117 586 105" fill="none" opacity=".9" stroke="url(#pipeGradFixed)" stroke-width="4"></path>
+<path d="M34 280 C112 234 185 221 268 206 L398 206 C456 208 518 213 586 225" fill="none" opacity=".9" stroke="url(#pipeGradFixed)" stroke-width="4"></path>
+<ellipse cx="54" cy="165" fill="none" opacity=".8" rx="52" ry="118" stroke="#071a42" stroke-width="3"></ellipse>
+<ellipse cx="235" cy="165" fill="none" opacity=".38" rx="32" ry="88" stroke="#071a42" stroke-width="2"></ellipse>
+<ellipse cx="380" cy="165" fill="none" opacity=".38" rx="24" ry="66" stroke="#071a42" stroke-width="2"></ellipse>
+<ellipse cx="520" cy="165" fill="none" opacity=".38" rx="18" ry="52" stroke="#071a42" stroke-width="2"></ellipse>
+<ellipse class="filter-ring" cx="330" cy="165" fill="url(#filterGradFixed)" opacity=".96" rx="47" ry="96"></ellipse>
+<ellipse cx="330" cy="165" fill="none" opacity=".36" rx="23" ry="70" stroke="#fff" stroke-width="4"></ellipse>
+<circle cx="330" cy="165" fill="#fff" opacity=".96" r="28"></circle>
+<text fill="#d96f0d" font-size="20" font-weight="900" text-anchor="middle" x="330" y="172">LCG</text>
+<text fill="#b86619" font-size="30" font-weight="900" text-anchor="middle" x="330" y="0">技術レベルが基準に満たない</text>
+<text fill="#b86619" font-size="30" font-weight="900" text-anchor="middle" x="330" y="40">候補者は入国させない</text>
+<path d="M120 115 L255 150" opacity=".45" stroke="#8a9298" stroke-width="3"></path>
+<path d="M115 210 L255 175" opacity=".45" stroke="#8a9298" stroke-width="3"></path>
+<path d="M260 165 L313 165" opacity=".52" stroke="#8a9298" stroke-width="3"></path>
+<path d="M377 165 L570 155" opacity=".78" stroke="#071a42" stroke-width="4"></path>
+</svg>
+<div>
+<div aria-label="通過候補者" class="trained-cloud">
+<div class="person"></div><div class="person"></div><div class="person"></div>
+</div>
+<div class="truck-row">
+<div class="truck"><span class="wheel w1"></span><span class="wheel w2"></span></div>
+<div class="truck"><span class="wheel w1"></span><span class="wheel w2"></span></div>
+<div class="truck"><span class="wheel w1"></span><span class="wheel w2"></span></div>
+</div>
+</div>
+</div>
+<div class="step-note">
+<div><b>Step 1</b>海外現地での候補者選定</div>
+<div><b>Step 2</b>シミュレーター教習</div>
+<div><b>Step 3</b>技評レポート＆模試</div>
+<div><b>Step 4</b>入国＆即試験</div>
+<div class="roi"><b>Step 5</b>現場投入<strong>Immediate<br/>ROI</strong></div>
+</div>
+<div class="filter-message">
+          「教育した」ではなく「<span>戦力になった</span>」を保証する。<br/>
+          採用の不確実性を完全に可視化する事前フィルタリング機能。
+        </div>
+</div>
+</div>
+</section>
+<section class="pt-16 pb-24 bg-white" id="process">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-3xl md:text-5xl font-black text-center mb-14 tracking-tight text-slate-900">採用・免許取得サポートの流れ</h2>
+<br/><br/>
+<div class="flex flex-col md:flex-row gap-3 mb-0 mt-2">
+<button class="flow-tab-btn flex-1 bg-[#1e3a8a] text-white px-6 py-4 rounded-t-xl font-bold shadow-md" id="tab-a-btn" onclick="switchFlowTab('a')">
+                    🌏 ケースA：海外在住の人材を採用
+                </button>
+<button class="flow-tab-btn flex-1 bg-slate-100 text-slate-600 px-6 py-4 rounded-t-xl font-bold border border-slate-200" id="tab-b-btn" onclick="switchFlowTab('b')">
+                    🇯🇵 ケースB：在籍スタッフに免許取得
+                </button>
+</div>
+<div class="flow-panel" id="flow-a">
+<div class="bg-[#1e3a8a] text-white text-center py-4 shadow-md">
+<h3 class="text-xl md:text-2xl font-bold">ケースA：海外在住の人材を採用する場合</h3>
+<p class="text-sm text-blue-100 mt-2">目安：最短 約7ヶ月 〜 最長 約12ヶ月</p>
+</div>
+<div class="grid grid-cols-12 border-x-2 border-b-2 border-slate-200 bg-slate-50">
+<div class="col-span-9 py-3 font-bold text-center border-r-2 border-slate-200">実施内容</div>
+<div class="col-span-3 py-3 font-bold text-center">期間目安</div>
+</div>
+<div class="grid grid-cols-12 border-x-2 border-slate-200 border-b-2">
+<div class="col-span-9 p-6 bg-blue-50/50 flex flex-col items-center justify-center border-r-2 border-slate-200">
+<div class="border-2 border-dashed border-blue-400 p-4 rounded-lg bg-white text-center w-full">
+<span class="inline-block bg-[#1e3a8a] text-white text-xs px-2 py-1 rounded mb-2 font-bold">採用前</span>
+<p class="font-bold text-[#1e3a8a] text-lg">母国免許保有者プールから候補者を抽出</p>
+<p class="text-sm text-slate-600 mt-1">現地パートナーを通じて人材プールを管理・提供</p>
+</div>
+</div>
+<div class="col-span-3 bg-slate-50 flex items-center justify-center text-slate-500 font-bold">随時</div>
+</div>
+<div class="flex justify-center py-4 bg-white border-x-2 border-slate-200"><div class="text-[#1e3a8a] text-2xl">▼</div></div>
+<div class="grid grid-cols-12 border-x-2 border-slate-200 border-y-2">
+<div class="col-span-9 p-4 flex gap-4 items-center border-r-2 border-slate-200">
+<div class="w-14 h-14 border-2 border-orange-500 text-orange-500 font-black text-2xl flex items-center justify-center shrink-0">01</div>
+<div>
+<h4 class="font-bold text-lg text-orange-600">事前スクリーニングテスト</h4>
+<p class="text-sm text-slate-600 mt-1">学習意欲・適性テスト、シミュレーター適性確認、身体要件チェックの3点で候補者を絞り込みます。</p>
+</div>
+</div>
+<div class="col-span-3 bg-slate-50 flex items-center justify-center text-center font-bold text-slate-700 px-2">1〜2週間</div>
+</div>
+<div class="grid grid-cols-12 border-x-2 border-slate-200 border-y-2">
+<div class="col-span-9 p-4 flex gap-4 items-center border-r-2 border-slate-200">
+<div class="w-14 h-14 border-2 border-[#1e3a8a] text-[#1e3a8a] font-black text-2xl flex items-center justify-center shrink-0">02</div>
+<div>
+<h4 class="font-bold text-lg">オンライン面接 → 内定</h4>
+<p class="text-sm text-slate-600 mt-1">スクリーニング通過者のみが面接に進み、内定後に雇用契約書を締結します。</p>
+</div>
+</div>
+<div class="col-span-3 bg-slate-100 flex items-center justify-center text-center font-bold text-slate-800 px-2">面接後</div>
+</div>
+<div class="flex justify-center py-4 bg-white border-x-2 border-slate-200"><div class="text-[#1e3a8a] text-2xl">▼</div></div>
+<div class="bg-[#1e3a8a] text-white py-3 text-center font-bold border-x-2 border-[#1e3a8a]">
+                    母国フェーズ：免許取得＋入国前教育
+                    <span class="block text-xs text-blue-100 mt-1 font-normal">目安：3〜6ヶ月／同時並行</span>
+</div>
+<div class="grid grid-cols-12 border-x-2 border-slate-200 border-y-2">
+<div class="col-span-9 p-4 flex gap-4 items-center border-r-2 border-slate-200">
+<div class="w-14 h-14 border-2 border-[#1e3a8a] text-[#1e3a8a] font-black text-2xl flex items-center justify-center shrink-0">03</div>
+<div>
+<h4 class="font-bold text-lg">大型免許取得 ＋ LCG教育プログラム</h4>
+<p class="text-sm text-slate-600 mt-1">母国で大型免許取得、学科eラーニング、シミュレーター技能練習を同時に進めます。</p>
+<div class="grid md:grid-cols-3 gap-3 mt-4">
+<div class="bg-slate-50 rounded-xl p-4 border-l-4 border-[#1e3a8a] border border-slate-200">
+<div class="text-xs font-black text-[#1e3a8a] tracking-widest uppercase mb-2">TASK 1</div>
+<h5 class="font-bold text-sm text-slate-900 mb-2">母国で大型免許取得</h5>
+<p class="text-xs text-slate-600 leading-relaxed">準中型→中型→大型の取得。現地パートナーがサポート。</p>
+</div>
+<div class="bg-slate-50 rounded-xl p-4 border-l-4 border-orange-500 border border-slate-200">
+<div class="text-xs font-black text-orange-500 tracking-widest uppercase mb-2">TASK 2</div>
+<h5 class="font-bold text-sm text-slate-900 mb-2">学科eラーニング</h5>
+<p class="text-xs text-slate-600 leading-relaxed">元教習所校長監修の動画＋テスト。学習データでスクリーニングにも活用。</p>
+</div>
+<div class="bg-slate-50 rounded-xl p-4 border-l-4 border-emerald-600 border border-slate-200">
+<div class="text-xs font-black text-emerald-600 tracking-widest uppercase mb-2">TASK 3</div>
+<h5 class="font-bold text-sm text-slate-900 mb-2">シミュレーター練習</h5>
+<p class="text-xs text-slate-600 leading-relaxed">試験コースを網羅。試験監によるフィードバックで合格見通しを立てます。</p>
+</div>
+</div>
+<div class="mt-3 text-xs text-blue-600 font-bold">
+                                ✦ LCG＋現地パートナーが全タスクをサポート
+                            </div>
+</div>
+</div>
+<div class="col-span-3 bg-slate-100 flex items-center justify-center text-center font-bold text-slate-800 px-2">3〜6ヶ月</div>
+</div>
+<div class="flex justify-center py-4 bg-white border-x-2 border-slate-200">
+<div class="text-[#1e3a8a] text-2xl">▼</div>
+</div>
+<div class="bg-[#1e3a8a] text-white py-3 text-center font-bold border-x-2 border-[#1e3a8a]">
+                    渡航準備：ビザ申請〜来日
+                    <span class="block text-xs text-blue-100 mt-1 font-normal">在留資格の申請から来日までを登録支援機関パートナーと連携</span>
+</div>
+<div class="grid grid-cols-12 border-x-2 border-slate-200 border-y-2">
+<div class="col-span-9 p-4 flex gap-4 items-center border-r-2 border-slate-200">
+<div class="w-14 h-14 border-2 border-[#1e3a8a] text-[#1e3a8a] font-black text-2xl flex items-center justify-center shrink-0">04</div>
+<div>
+<h4 class="font-bold text-lg">在留資格の申請</h4>
+<p class="text-sm text-slate-600 mt-1">特定活動または別在留資格ルートを検討し、登録支援機関パートナーが申請手続きをサポートします。</p>
+</div>
+</div>
+<div class="col-span-3 bg-slate-100 flex items-center justify-center text-center font-bold text-slate-800 px-2">2〜4ヶ月</div>
+</div>
+<div class="flex justify-center py-4 bg-white border-x-2 border-slate-200">
+<div class="text-orange-400 text-2xl">▼</div>
+</div>
+<div class="bg-orange-500 text-white py-3 text-center font-bold border-x-2 border-orange-500">
+                    来日後：外免切替〜就労開始
+                    <span class="block text-xs text-orange-100 mt-1 font-normal">実車訓練・外免切替試験・在留資格変更までを一貫サポート</span>
+</div>
+<div class="grid grid-cols-12 border-x-2 border-t-2 border-slate-200 bg-white">
+<div class="col-span-9 p-5 flex gap-5 items-center border-r-2 border-b-2 border-slate-100">
+<div class="w-14 h-14 border-2 border-[#1e3a8a] text-[#1e3a8a] font-black text-2xl flex items-center justify-center shrink-0 rounded-lg">05</div>
+<div>
+<h4 class="font-bold text-lg text-slate-900">教習所での実車訓練</h4>
+<p class="text-sm text-slate-600 mt-1">LCGが教習所を短期レンタルし、実際のコースで実車訓練を実施します。</p>
+</div>
+</div>
+<div class="col-span-3 row-span-3 bg-slate-100 flex flex-col items-center justify-center text-center font-bold text-slate-900 px-4 border-b-2 border-slate-200">
+                        1〜6ヶ月
+                        <span class="text-[11px] font-normal mt-2 text-slate-500 leading-tight">来日後フェーズ</span>
+</div>
+<div class="col-span-9 p-5 flex gap-5 items-center border-r-2 border-b-2 border-slate-100">
+<div class="w-14 h-14 border-2 border-[#1e3a8a] text-[#1e3a8a] font-black text-2xl flex items-center justify-center shrink-0 rounded-lg">06</div>
+<div>
+<h4 class="font-bold text-lg text-slate-900">外国免許切替試験</h4>
+<p class="text-sm text-slate-600 mt-1">学科と技能確認の両方に合格が必要です。不合格時は原因分析と再トレーニングを実施します。</p>
+</div>
+</div>
+<div class="col-span-9 p-5 border-r-2 border-b-2 border-orange-100 bg-orange-50">
+<div class="rounded-xl border border-orange-200 bg-white p-5">
+<h4 class="font-black text-orange-700 mb-2">不合格の場合について</h4>
+<p class="text-sm text-slate-700 leading-relaxed">
+                                試験予約が埋まっていた等の不可抗力的な理由がある場合、出入管の判断で短期延長が認められる可能性があります。
+                                ただし原則は期間内での合格が条件です。LCGでは改善プログラムで不合格理由を分析し、再チャレンジをサポートします。
+                            </p>
+</div>
+</div>
+<div class="process-mobile-full-row col-span-9 p-5 flex gap-5 items-center border-r-2 border-b-2 border-slate-100">
+<div class="w-14 h-14 border-2 border-orange-500 text-orange-500 font-black text-2xl flex items-center justify-center shrink-0 rounded-lg">07</div>
+<div>
+<h4 class="font-bold text-lg text-slate-900">🔄 不合格の場合：原因分析＆再トレーニング</h4>
+<p class="text-sm text-slate-600 mt-1">
+                                不合格になった理由を明確化し、弱点に特化した再トレーニングを実施。シミュレーターと実車訓練を組み合わせて次回の合格を目指します。
+                            </p>
+</div>
+</div>
+<div class="process-mobile-full-row col-span-9 p-5 flex gap-5 items-center border-r-2 border-b-2 border-slate-200">
+<div class="w-14 h-14 border-2 border-orange-500 text-orange-500 font-black text-2xl flex items-center justify-center shrink-0 rounded-lg">08</div>
+<div>
+<h4 class="font-bold text-lg text-orange-600">合格 → 在留資格変更 → 就労開始</h4>
+<p class="text-sm text-slate-600 mt-1">外免切替合格後、特定技能「自動車運送業」への在留資格変更申請を行い、就労開始です。</p>
+</div>
+</div>
+</div>
+<div class="bg-orange-50 border-x-2 border-b-2 border-orange-200 rounded-b-lg p-6">
+<h4 class="font-black text-orange-700 mb-3">LCG独自の教習プログラム（4フェーズ）</h4>
+<div class="grid md:grid-cols-4 gap-3">
+<div class="bg-white rounded-xl p-4 border border-orange-100">
+<p class="text-orange-500 font-black text-xl">01</p>
+<p class="font-bold text-sm mt-1">学科eラーニング</p>
+<p class="text-xs text-slate-600 leading-relaxed mt-3">
+                                元教習所校長監修の動画＋確認テスト。各学習者のデータを可視化し、スクリーニングにも活用。
+                            </p>
+</div>
+<div class="bg-white rounded-xl p-4 border border-orange-100">
+<p class="text-orange-500 font-black text-xl">02</p>
+<p class="font-bold text-sm mt-1">シミュレーター技能練習</p>
+<p class="text-xs text-slate-600 leading-relaxed mt-3">
+                                試験コースを完全網羅。試験監によるリアルタイムフィードバックで弱点を克服。
+                            </p>
+</div>
+<div class="bg-white rounded-xl p-4 border border-orange-100">
+<p class="text-orange-500 font-black text-xl">03</p>
+<p class="font-bold text-sm mt-1">教習所での実車訓練</p>
+<p class="text-xs text-slate-600 leading-relaxed mt-3">
+                                教習所を短期レンタル。本番環境に近い実車練習で技能確認に備えます。
+                            </p>
+</div>
+<div class="bg-white rounded-xl p-4 border border-orange-100">
+<p class="text-orange-500 font-black text-xl">04</p>
+<p class="font-bold text-sm mt-1">改善・再トレーニング</p>
+<p class="text-xs text-slate-600 leading-relaxed mt-3">
+                                不合格時の原因を徹底分析。合格まで伴走する継続サポート体制。
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<div class="flow-panel hidden" id="flow-b">
+<div class="bg-slate-900 text-white text-center py-4 shadow-md">
+<h3 class="text-xl md:text-2xl font-bold">ケースB：在籍スタッフに免許取得</h3>
+<p class="text-sm text-slate-300 mt-2">既存人材をドライバー候補として育成</p>
+</div>
+<div class="bg-blue-50 border-x-2 border-b-2 border-blue-100 p-6">
+<p class="text-blue-700 leading-relaxed">
+                        すでに貴社に在籍している外国人スタッフに運転免許を取得させることで、業務の幅が広がります。採用コストゼロで即戦力ドライバーを育成できます。
+                    </p>
+</div>
+<div class="bg-[#1e3a8a] text-white py-3 text-center font-bold border-x-2 border-[#1e3a8a]">
+                    現状確認・プラン設計
+                    <span class="block text-xs text-blue-100 mt-1 font-normal">対象スタッフの情報をもとに、最適な免許取得ルートを判断</span>
+</div>
+<div class="grid grid-cols-12 border-x-2 border-slate-200 border-y-2">
+<div class="col-span-9 p-5 flex gap-5 items-start border-r-2 border-slate-200">
+<div class="w-14 h-14 border-2 border-[#1e3a8a] text-[#1e3a8a] font-black text-2xl flex items-center justify-center shrink-0">01</div>
+<div>
+<h4 class="font-bold text-lg">対象スタッフの情報共有</h4>
+<p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                                対象スタッフの国籍・母国免許の有無・現在の在留資格をLCGへ共有。最適なルートをご提案します。
+                            </p>
+<div class="grid md:grid-cols-2 gap-3 mt-4">
+<div class="bg-white rounded-xl p-4 border border-blue-100 border-l-4 border-l-[#1e3a8a]">
+<h5 class="font-bold text-sm text-[#1e3a8a] mb-2">ルートB-1：母国免許あり → 外免切替</h5>
+<p class="text-xs text-slate-600 leading-relaxed">
+                                        母国の免許を日本の免許に切り替える手続き。LCGの教習プログラムで合格率を高めます。
+                                    </p>
+</div>
+<div class="bg-white rounded-xl p-4 border border-orange-100 border-l-4 border-l-orange-500">
+<h5 class="font-bold text-sm text-orange-600 mb-2">ルートB-2：母国免許なし → 一発試験</h5>
+<p class="text-xs text-slate-600 leading-relaxed">
+                                        教習所に通わず、社内での学習サポート＋LCGのシミュレーター・実車訓練で試験に挑みます。
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-3 bg-slate-100 flex items-center justify-center text-center font-bold text-slate-800 px-2">無料診断</div>
+</div>
+<div class="flex justify-center py-4 bg-white border-x-2 border-slate-200">
+<div class="text-[#1e3a8a] text-2xl">▼</div>
+</div>
+<div class="bg-[#1e3a8a] text-white py-3 text-center font-bold border-x-2 border-[#1e3a8a]">
+                    LCG教習プログラム開始
+                    <span class="block text-xs text-blue-100 mt-1 font-normal">学科・シミュレーター・実車訓練を組み合わせて合格を目指す</span>
+</div>
+<div class="grid grid-cols-12 border-x-2 border-slate-200 border-y-2">
+<div class="col-span-9 p-5 flex gap-5 items-start border-r-2 border-slate-200">
+<div class="w-14 h-14 border-2 border-[#1e3a8a] text-[#1e3a8a] font-black text-2xl flex items-center justify-center shrink-0">02</div>
+<div>
+<h4 class="font-bold text-lg">学科eラーニング</h4>
+<p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                                業務終わりや空き時間にスマートフォンやPCで学習。元教習所校長監修の動画コンテンツ＋確認テストで、スキマ時間に効率よく学べます。
+                            </p>
+</div>
+</div>
+<div class="col-span-3 bg-slate-100 flex items-center justify-center text-center font-bold text-slate-800 px-2">スキマ時間</div>
+</div>
+<div class="grid grid-cols-12 border-x-2 border-slate-200 border-y-2">
+<div class="col-span-9 p-5 flex gap-5 items-start border-r-2 border-slate-200">
+<div class="w-14 h-14 border-2 border-[#1e3a8a] text-[#1e3a8a] font-black text-2xl flex items-center justify-center shrink-0">03</div>
+<div>
+<h4 class="font-bold text-lg">シミュレーター技能練習</h4>
+<p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                                日本の試験コースをシミュレーターで反復練習。試験官目線でのフィードバックを受けながら、合格に必要な所作を身につけます。
+                            </p>
+</div>
+</div>
+<div class="col-span-3 bg-slate-100 flex items-center justify-center text-center font-bold text-slate-800 px-2">反復練習</div>
+</div>
+<div class="grid grid-cols-12 border-x-2 border-slate-200 border-y-2">
+<div class="col-span-9 p-5 flex gap-5 items-start border-r-2 border-slate-200">
+<div class="w-14 h-14 border-2 border-[#1e3a8a] text-[#1e3a8a] font-black text-2xl flex items-center justify-center shrink-0">04</div>
+<div>
+<h4 class="font-bold text-lg">教習所での実車訓練</h4>
+<p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                                LCGが教習所を短期レンタルし、実車訓練を実施。本番のコースに近い環境で練習できます。
+                            </p>
+</div>
+</div>
+<div class="col-span-3 bg-slate-100 flex items-center justify-center text-center font-bold text-slate-800 px-2">実車訓練</div>
+</div>
+<div class="flex justify-center py-4 bg-white border-x-2 border-slate-200">
+<div class="text-orange-400 text-2xl">▼</div>
+</div>
+<div class="bg-orange-500 text-white py-3 text-center font-bold border-x-2 border-orange-500">
+                    試験〜合格〜業務拡大
+                    <span class="block text-xs text-orange-100 mt-1 font-normal">免許取得後、既存スタッフの業務範囲を拡大</span>
+</div>
+<div class="grid grid-cols-12 border-x-2 border-slate-200 border-y-2">
+<div class="col-span-9 p-5 flex gap-5 items-center border-r-2 border-slate-200">
+<div class="w-14 h-14 border-2 border-orange-500 text-orange-500 font-black text-2xl flex items-center justify-center shrink-0">05</div>
+<div>
+<h4 class="font-bold text-lg text-orange-600">試験〜合格〜業務拡大</h4>
+<p class="text-sm text-slate-600 mt-1">不合格の場合も原因分析と再トレーニングを繰り返し、免許取得後は配送・送迎・拠点間移動など業務範囲を拡大します。</p>
+</div>
+</div>
+<div class="col-span-3 bg-orange-50 flex items-center justify-center text-center font-bold text-orange-800 px-2">業務拡大</div>
+</div>
+<div class="bg-orange-50 border-x-2 border-b-2 border-orange-200 p-6">
+<h4 class="font-black text-orange-700 mb-2">LCG独自の教習プログラム（4フェーズ）</h4>
+<p class="text-sm text-slate-700 leading-relaxed mb-4">
+                        ケースA・Bともに共通の教育プログラムで合格をサポートします。
+                    </p>
+<div class="grid md:grid-cols-4 gap-3">
+<div class="bg-white rounded-xl p-4 border border-orange-100">
+<p class="text-orange-500 font-black text-xl">01</p>
+<p class="font-bold text-sm mt-1">学科eラーニング</p>
+<p class="text-xs text-slate-600 leading-relaxed mt-3">
+                                元教習所校長監修の動画＋確認テスト。各学習者のデータを可視化し、スクリーニングにも活用。
+                            </p>
+</div>
+<div class="bg-white rounded-xl p-4 border border-orange-100">
+<p class="text-orange-500 font-black text-xl">02</p>
+<p class="font-bold text-sm mt-1">シミュレーター技能練習</p>
+<p class="text-xs text-slate-600 leading-relaxed mt-3">
+                                試験コースを完全網羅。試験監によるリアルタイムフィードバックで弱点を克服。
+                            </p>
+</div>
+<div class="bg-white rounded-xl p-4 border border-orange-100">
+<p class="text-orange-500 font-black text-xl">03</p>
+<p class="font-bold text-sm mt-1">教習所での実車訓練</p>
+<p class="text-xs text-slate-600 leading-relaxed mt-3">
+                                教習所を短期レンタル。本番環境に近い実車練習で技能確認に備えます。
+                            </p>
+</div>
+<div class="bg-white rounded-xl p-4 border border-orange-100">
+<p class="text-orange-500 font-black text-xl">04</p>
+<p class="font-bold text-sm mt-1">改善・再トレーニング</p>
+<p class="text-xs text-slate-600 leading-relaxed mt-3">
+                                不合格時の原因を徹底分析。合格まで伴走する継続サポート体制。
+                            </p>
+</div>
+</div>
+</div>
+</div></div>
+</section></div>
+
+<section class="section cost-support-section">
+<div class="wrap">
+<div class="eyebrow">COST SUPPORT</div>
+<h2>導入ハードルをさらに下げる<br/>補助金・助成金マトリクス</h2>
+<p class="sub">外国人材の採用に向けて、各地域での様々な補助金・助成金が用意されています。専門家と協力し申請までサポートします。</p>
+<div class="card matrix-card">
+<div class="matrix-head">
+<div class="pill">全国制度 × 地域制度を組み合わせて、導入コストを圧縮</div>
+</div>
+<div class="matrix-grid">
+<div class="axis-empty"></div>
+<div class="axis-top">National（全国対象）</div>
+<div class="axis-top axis-top-regional">
+<span class="matrix-badge matrix-badge-header">EX 山口県</span>
+<span>Regional（山口県・市町村）</span>
+</div>
+<div class="axis-side">
+            入国前・導入時<br/>
+<span class="small muted">Pre-entry / Introduction</span>
+</div>
+<div class="matrix-item">
+<h4>人材確保等支援助成金</h4>
+<p>就労環境整備・受け入れ準備に関する支援を全国対象で活用可能。</p>
+</div>
+<div class="matrix-item highlight">
+<h4>山口県・市町村補助金</h4>
+<p>LCGの教育研修委託費が対象経費に該当する可能性があり、地域施策との接続がしやすい。</p>
+</div>
+<div class="axis-side">
+            入社後・継続<br/>
+<span class="small muted">Post-entry / Ongoing</span>
+</div>
+<div class="matrix-item">
+<h4>人材開発支援助成金</h4>
+<p>入社後のOFF-JTに対して、賃金助成・経費助成を活用。継続教育の費用負担を下げられる。</p>
+</div>
+<div class="matrix-item">
+<h4>地域ごとの上乗せ支援</h4>
+<p>市町村や商工支援施策によっては、受け入れ体制整備・定着支援・研修費の一部に追加支援が期待できる。</p>
+</div>
+</div>
+<div class="strategy">
+<strong>市の補助金＋県の補助金＋国の助成金</strong> の「三重取り」により、導入時のキャッシュ負担を大幅に抑えられる可能性があります。
+        </div>
+</div>
+</div>
+</section>
+<!-- CTA / Contact -->
+
+<!-- End imported sections -->
+<section class="py-16 bg-slate-950 text-white relative overflow-hidden" id="support">
+<div class="absolute top-0 left-1/4 w-[420px] h-[420px] bg-blue-600/10 rounded-full blur-[110px] pointer-events-none"></div>
+<div class="absolute bottom-0 right-1/4 w-[420px] h-[420px] bg-orange-500/5 rounded-full blur-[110px] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="bg-slate-900/60 backdrop-blur-2xl rounded-[2rem] border border-white/10 shadow-2xl px-8 md:px-12 py-8 md:py-10">
+<div class="text-center mb-6">
+<span class="text-blue-400 font-bold tracking-[0.4em] uppercase text-sm mb-4 block">SUBSIDY &amp; GUARANTEE</span>
+<h2 class="text-2xl md:text-4xl font-black leading-tight">
+                        不合格時の<span class="text-blue-400">継続サポート</span>
+</h2>
+</div>
+<div class="grid md:grid-cols-[1.4fr_1fr] gap-6 md:gap-8 items-center">
+<div>
+<p class="text-base md:text-lg text-slate-300 leading-relaxed">
+                            不合格時には、原因分析と再トレーニングプログラムを用意。<br/>
+                            規定回数以内に合格できなかった場合の補償制度もございます。
+                        </p>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-2xl p-5 md:p-6">
+<p class="text-slate-400 text-sm mb-3 font-bold tracking-widest">不合格時も</p>
+<p class="text-xl md:text-3xl font-black text-orange-500 leading-tight">
+                            原因分析と再トレーニングで<br/>
+<span class="text-white underline decoration-orange-500 underline-offset-8">合格まで伴走</span>します
+                        </p>
+</div>
+</div>
+<div class="mt-6">
+<a class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 rounded-2xl transition-all shadow-lg shadow-blue-900/40" href="index.html#contact">
+                        無料相談を申し込む
+                        <svg class="h-5 w-5 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-white" id="faq">
+<div class="max-w-4xl mx-auto px-6">
+<h2 class="text-center text-3xl font-black mb-12 text-slate-900 uppercase tracking-widest">FAQ</h2>
+<div class="space-y-2">
+<details class="group border-b border-slate-200">
+<summary class="flex justify-between items-center font-bold text-base md:text-lg cursor-pointer list-none py-5 transition-all hover:text-blue-600">
+<div class="flex items-start gap-3"><span class="text-blue-600 font-mono">Q.</span><span>海外在住の人材を採用する場合、どれくらいの期間がかかりますか？</span></div>
+<span class="transition-transform duration-300 group-open:rotate-180 text-slate-400">⌄</span>
+</summary>
+<div class="pl-8 pb-6 text-slate-600 text-sm md:text-base leading-relaxed">
+                        目安は最短約7ヶ月〜最長約12ヶ月です。母国での免許取得状況、在留資格申請、外免切替試験の予約状況などにより変動します。
+                    </div>
+</details>
+<details class="group border-b border-slate-200">
+<summary class="flex justify-between items-center font-bold text-base md:text-lg cursor-pointer list-none py-5 transition-all hover:text-blue-600">
+<div class="flex items-start gap-3"><span class="text-blue-600 font-mono">Q.</span><span>どの国の候補者に対応していますか？</span></div>
+<span class="transition-transform duration-300 group-open:rotate-180 text-slate-400">⌄</span>
+</summary>
+<div class="pl-8 pb-6 text-slate-600 text-sm md:text-base leading-relaxed">
+                        フィリピン、インドネシア、ベトナム、カンボジアを中心に、現地パートナーを通じて人材プールを管理しています。対象国は順次拡大予定です。
+                    </div>
+</details>
+<details class="group border-b border-slate-200">
+<summary class="flex justify-between items-center font-bold text-base md:text-lg cursor-pointer list-none py-5 transition-all hover:text-blue-600">
+<div class="flex items-start gap-3"><span class="text-blue-600 font-mono">Q.</span><span>すでに在籍している外国人スタッフにも対応できますか？</span></div>
+<span class="transition-transform duration-300 group-open:rotate-180 text-slate-400">⌄</span>
+</summary>
+<div class="pl-8 pb-6 text-slate-600 text-sm md:text-base leading-relaxed">
+                        はい。ケースBとして、貴社に在籍中の外国人スタッフに運転免許を取得させるプログラムもご用意しています。
+                    </div>
+</details>
+<details class="group border-b border-slate-200">
+<summary class="flex justify-between items-center font-bold text-base md:text-lg cursor-pointer list-none py-5 transition-all hover:text-blue-600">
+<div class="flex items-start gap-3"><span class="text-blue-600 font-mono">Q.</span><span>費用はどのくらいかかりますか？</span></div>
+<span class="transition-transform duration-300 group-open:rotate-180 text-slate-400">⌄</span>
+</summary>
+<div class="pl-8 pb-6 text-slate-600 text-sm md:text-base leading-relaxed">
+                        ケースやご要望によって異なります。補助金・助成金の活用により大幅にコストを圧縮できるケースもございますので、まずは無料相談にてお見積りをご確認ください。
+                    </div>
+</details>
+<details class="group border-b border-slate-200">
+<summary class="flex justify-between items-center font-bold text-base md:text-lg cursor-pointer list-none py-5 transition-all hover:text-blue-600">
+<div class="flex items-start gap-3"><span class="text-blue-600 font-mono">Q.</span><span>もし試験に合格できなかった場合は？</span></div>
+<span class="transition-transform duration-300 group-open:rotate-180 text-slate-400">⌄</span>
+</summary>
+<div class="pl-8 pb-6 text-slate-600 text-sm md:text-base leading-relaxed">
+                        LCGでは不合格時の原因分析と再トレーニングプログラムを用意しています。また、規定回数以内に合格できなかった場合の補償制度もございます。
+                    </div>
+</details>
+</div>
+</div>
+</section>
+<section class="py-24 bg-slate-900 text-white text-center" id="contact">
+<div class="max-w-4xl mx-auto px-6">
+<h2 class="text-3xl md:text-5xl font-black mb-6">まずは無料でご相談ください</h2>
+<p class="text-slate-300 leading-relaxed mb-10">
+                「自社に合うルートは？」「費用感を知りたい」「Gマークの取得から相談したい」<br class="hidden md:block"/>
+                どんなご質問でもお気軽にどうぞ。
+            </p>
+<a class="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold transition-all shadow-xl shadow-orange-900/30" href="index.html#contact">
+                外国人ドライバーの採用を相談する →
+            </a>
+</div>
+</section>
+<script>
+      function switchFlowTab(tab) {
+        const aPanel = document.getElementById('flow-a');
+        const bPanel = document.getElementById('flow-b');
+        const aBtn = document.getElementById('tab-a-btn');
+        const bBtn = document.getElementById('tab-b-btn');
+        if (tab === 'a') {
+          aPanel.classList.remove('hidden');
+          bPanel.classList.add('hidden');
+          aBtn.className = 'flow-tab-btn flex-1 bg-[#1e3a8a] text-white px-6 py-4 rounded-t-xl font-bold shadow-md';
+          bBtn.className = 'flow-tab-btn flex-1 bg-slate-100 text-slate-600 px-6 py-4 rounded-t-xl font-bold border border-slate-200';
+        } else {
+          bPanel.classList.remove('hidden');
+          aPanel.classList.add('hidden');
+          bBtn.className = 'flow-tab-btn flex-1 bg-[#1e3a8a] text-white px-6 py-4 rounded-t-xl font-bold shadow-md';
+          aBtn.className = 'flow-tab-btn flex-1 bg-slate-100 text-slate-600 px-6 py-4 rounded-t-xl font-bold border border-slate-200';
+        }
+      }
+    </script>
+<footer class="bg-slate-900 text-slate-400 py-12">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 mb-8">
+<div class="col-span-2">
+<div class="mb-4 flex items-center">
+<img alt="LogiCoreGear Logo" class="h-10 w-auto" src="logo.png"/>
+<span class="ml-3 text-xl font-bold text-white">
+        LogiCoreGear
+    </span>
+</div>
+<p class="text-sm leading-relaxed mb-4">
+                    融合して、日本の物流を、もう一度強くする。<br/>
+                    物流DXとVR教習で、現場の課題を解決するパートナー。
+                </p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">リンク</h4>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-blue-400 transition" href="index.html#philosophy">理念</a></li>
+<li><a class="hover:text-blue-400 transition" href="index.html#challenges">解決する課題</a></li>
+<li><a class="hover:text-blue-400 transition" href="index.html#gears">事業内容</a></li>
+<li><a class="hover:text-blue-400 transition" href="index.html#news">お知らせ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">お問い合わせ</h4>
+<a class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold px-6 py-3 rounded-lg transition inline-block mb-4" href="index.html#contact">
+                    お問い合わせフォームへ
+                </a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 border-t border-slate-800 pt-8 text-center text-sm">
+            © 2026 LogiCoreGear Inc. All Rights Reserved.
+        </div>
+</footer>
+</body>
+</html>
