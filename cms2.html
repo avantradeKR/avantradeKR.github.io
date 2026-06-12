@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>特定技能「自動車運送業」を使って外国人ドライバーを採用する方法【2026年版】| LogiCoreGear</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<style>
+
+:root {
+  --slate-950:#020617;
+  --slate-900:#0F172A;
+  --slate-800:#1E293B;
+  --slate-700:#334155;
+  --slate-600:#475569;
+  --slate-500:#64748B;
+  --slate-400:#94A3B8;
+  --slate-300:#CBD5E1;
+  --slate-200:#E2E8F0;
+  --slate-100:#F1F5F9;
+  --slate-50:#F8FAFC;
+  --sky-900:#0C4A6E;
+  --sky-800:#075985;
+  --sky-700:#0369A1;
+  --sky-600:#0284C7;
+  --sky-100:#E0F2FE;
+  --sky-50:#F0F9FF;
+  --orange-500:#F97316;
+  --orange-400:#FB923C;
+  --white:#FFFFFF;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'Noto Sans JP', sans-serif;
+  color:var(--slate-900);
+  background:var(--slate-50);
+  letter-spacing:0.01em;
+}
+a { color:inherit; }
+.site-nav {
+  position:fixed;
+  top:0; left:0;
+  width:100%;
+  z-index:100;
+  height:80px;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--slate-200);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 24px;
+}
+.nav-logo {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:var(--slate-900);
+  font-weight:800;
+  font-size:20px;
+  text-decoration:none;
+  letter-spacing:-0.02em;
+}
+.nav-logo::before {
+  content:"";
+  display:block;
+  width:40px;
+  height:40px;
+  background:url('logo.png') center/contain no-repeat;
+}
+.nav-link {
+  color:var(--slate-600);
+  text-decoration:none;
+  font-size:14px;
+  font-weight:700;
+  transition:color .2s ease;
+}
+.nav-link:hover { color:var(--sky-700); }
+.article-header {
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,#111827 0%,#172033 45%,#1E293B 100%);
+  padding:152px 24px 72px;
+  text-align:center;
+  color:var(--white);
+}
+.article-header::before {
+  content:"";
+  position:absolute;
+  right:-120px;
+  top:-120px;
+  width:360px;
+  height:360px;
+  background:rgba(56,189,248,.18);
+  border-radius:999px;
+  filter:blur(24px);
+}
+.article-header::after {
+  content:"";
+  position:absolute;
+  left:-120px;
+  bottom:-160px;
+  width:320px;
+  height:320px;
+  background:rgba(255,255,255,.08);
+  border-radius:999px;
+  filter:blur(24px);
+}
+.article-header > * { position:relative; z-index:1; }
+.cat {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(224,242,254,.12);
+  color:#7DD3FC;
+  border:1px solid rgba(125,211,252,.25);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  padding:8px 18px;
+  border-radius:999px;
+  margin-bottom:24px;
+}
+.article-header h1 {
+  font-size:clamp(28px,4.3vw,54px);
+  font-weight:900;
+  line-height:1.35;
+  letter-spacing:-0.035em;
+  max-width:960px;
+  margin:0 auto 22px;
+}
+.article-header .meta {
+  font-size:14px;
+  color:var(--slate-300);
+  font-weight:500;
+}
+.article-body {
+  max-width:880px;
+  margin:0 auto;
+  padding:72px 24px 96px;
+}
+.lead {
+  font-size:18px;
+  color:var(--slate-700);
+  line-height:2;
+  margin-bottom:56px;
+  padding:30px 34px;
+  background:var(--sky-50);
+  border:1px solid var(--sky-100);
+  border-left:6px solid var(--sky-700);
+  border-radius:24px;
+  box-shadow:0 18px 45px rgba(14,165,233,.10);
+}
+h2 {
+  font-size:clamp(26px,3vw,36px);
+  font-weight:900;
+  color:var(--slate-900);
+  line-height:1.45;
+  letter-spacing:-0.03em;
+  margin:64px 0 22px;
+  padding-bottom:16px;
+  border-bottom:1px solid var(--slate-200);
+}
+h2::first-letter { color:inherit; }
+.section-zero { color:var(--slate-900); }
+.section-num { color:var(--orange-500); }
+h3 {
+  font-size:22px;
+  font-weight:800;
+  color:var(--sky-800);
+  margin:38px 0 14px;
+  line-height:1.5;
+}
+p {
+  font-size:16px;
+  color:var(--slate-600);
+  line-height:1.95;
+  margin-bottom:18px;
+}
+strong { color:var(--slate-900); font-weight:800; }
+.stat-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin:32px 0 48px;
+}
+.stat-item {
+  background:var(--slate-900);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  padding:28px 20px;
+  text-align:center;
+  box-shadow:0 22px 55px rgba(15,23,42,.20);
+}
+.stat-item .s-num {
+  font-size:clamp(34px,4vw,46px);
+  font-weight:900;
+  color:var(--orange-400);
+  letter-spacing:-0.04em;
+}
+.stat-item .s-unit {
+  font-size:14px;
+  color:var(--orange-400);
+  font-weight:800;
+  margin-left:2px;
+}
+.stat-item .s-label {
+  font-size:13px;
+  color:var(--slate-300);
+  margin-top:10px;
+  line-height:1.7;
+}
+.table-wrap {
+  overflow-x:auto;
+  margin:28px 0 38px;
+  background:var(--white);
+  border:1px solid var(--slate-200);
+  border-radius:22px;
+  box-shadow:0 18px 45px rgba(15,23,42,.06);
+}
+table {
+  width:100%;
+  border-collapse:collapse;
+  font-size:15px;
+  min-width:620px;
+}
+th {
+  background:var(--slate-900);
+  color:var(--white);
+  padding:16px 20px;
+  text-align:left;
+  font-weight:800;
+  white-space:nowrap;
+}
+td {
+  padding:16px 20px;
+  border-bottom:1px solid var(--slate-200);
+  color:var(--slate-600);
+  vertical-align:top;
+  line-height:1.75;
+}
+tr:nth-child(even) td { background:var(--slate-50); }
+tr:last-child td { border-bottom:none; }
+.percent-highlight {
+  color:var(--orange-500);
+  font-weight:900;
+  font-size:18px;
+}
+.check-list {
+  list-style:none;
+  margin:24px 0 34px;
+  display:grid;
+  gap:12px;
+}
+.check-list li {
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  font-size:15px;
+  color:var(--slate-700);
+  line-height:1.85;
+  background:var(--white);
+  border:1px solid var(--sky-100);
+  border-radius:18px;
+  padding:16px 18px;
+  box-shadow:0 10px 24px rgba(14,165,233,.06);
+}
+.check-list li::before {
+  content:'✓';
+  color:var(--sky-700);
+  background:var(--sky-100);
+  width:26px;
+  height:26px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  font-size:14px;
+  flex-shrink:0;
+  margin-top:2px;
+}
+.warn-box {
+  background:#FFF7ED;
+  border:1px solid #FED7AA;
+  border-left:6px solid var(--orange-500);
+  border-radius:22px;
+  padding:24px 28px;
+  margin:28px 0 36px;
+  box-shadow:0 18px 42px rgba(249,115,22,.08);
+}
+.warn-box strong {
+  display:block;
+  color:#9A3412;
+  margin-bottom:8px;
+  font-size:16px;
+  font-weight:900;
+}
+.warn-box p {
+  font-size:15px;
+  color:#9A3412;
+  margin:0;
+}
+.insight-box {
+  background:var(--sky-50);
+  border:1px solid var(--sky-100);
+  border-left:6px solid var(--sky-700);
+  border-radius:22px;
+  padding:24px 28px;
+  margin:28px 0 36px;
+  box-shadow:0 18px 42px rgba(14,165,233,.08);
+}
+.insight-box strong {
+  display:block;
+  font-size:13px;
+  color:var(--sky-700);
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+.lcg-box {
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,var(--slate-900) 0%,#172033 55%,#1E293B 100%);
+  border-radius:32px;
+  padding:44px 36px;
+  margin:64px 0 0;
+  text-align:center;
+  box-shadow:0 28px 70px rgba(15,23,42,.25);
+}
+.lcg-box::before {
+  content:"";
+  position:absolute;
+  right:-80px;
+  bottom:-80px;
+  width:220px;
+  height:220px;
+  background:rgba(14,165,233,.18);
+  border-radius:999px;
+  filter:blur(20px);
+}
+.lcg-box > * { position:relative; z-index:1; }
+.lcg-box h3 {
+  font-size:clamp(24px,3vw,32px);
+  font-weight:900;
+  color:var(--white);
+  margin:0 0 14px;
+  line-height:1.5;
+}
+.lcg-box p {
+  font-size:15px;
+  color:var(--slate-300);
+  margin-bottom:28px;
+}
+.lcg-box .cta-btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--orange-500);
+  color:var(--white);
+  font-weight:800;
+  font-size:15px;
+  padding:16px 38px;
+  border-radius:999px;
+  text-decoration:none;
+  box-shadow:0 18px 40px rgba(249,115,22,.24);
+  transition:transform .2s ease, background .2s ease;
+}
+.lcg-box .cta-btn:hover {
+  background:#EA580C;
+  transform:translateY(-2px);
+}
+.source-note {
+  font-size:12px;
+  color:var(--slate-400);
+  margin-top:56px;
+  padding-top:26px;
+  border-top:1px solid var(--slate-200);
+  line-height:1.9;
+}
+@media(max-width:768px){
+  .site-nav { height:72px; padding:0 18px; }
+  .nav-logo { font-size:18px; }
+  .nav-logo::before { width:34px; height:34px; }
+  .article-header { padding:132px 20px 58px; }
+  .article-body { padding:56px 20px 80px; }
+  .lead { font-size:16px; padding:24px; border-radius:20px; }
+  .stat-grid { grid-template-columns:1fr; }
+  h2 { margin-top:54px; }
+}
+
+</style>
+</head>
+<body>
+<nav class="site-nav">
+<a class="nav-logo" href="index.html">LogiCoreGear</a>
+<a class="nav-link" href="index.html#news">← ニュース一覧</a>
+</nav>
+<header class="article-header">
+<span class="cat">GUIDE</span>
+<h1>特定技能「自動車運送業」で<br/>外国人ドライバーを採用するには？<br/>制度の全体像と受入要件【2026年版】</h1>
+<p class="meta">2026.05.12 ｜ 所要時間：約7分</p>
+</header>
+<article class="article-body">
+<p class="lead">
+    2024年3月に新設された在留資格「特定技能・自動車運送業」。深刻なドライバー不足を背景に生まれたこの制度ですが、受入要件が複雑で「何から始めればいいかわからない」という声をよく耳にします。本記事では制度の仕組みと受入要件を整理します。
+  </p>
+<h2><span class="section-zero">0</span><span class="section-num">1</span>｜制度の概要：なぜ生まれたのか</h2>
+<p>政府の推計では、2024年問題（時間外労働の年960時間上限規制）の影響も重なり、2029年度までに約28.8万人のドライバーが不足すると試算されています。この危機的状況に対応するため、2024年3月29日の閣議決定により特定技能1号の対象分野に「自動車運送業」が追加されました。</p>
+<div class="stat-grid">
+<div class="stat-item">
+<div class="s-num">24,500<span class="s-unit">人</span></div>
+<div class="s-label">5年間（2024〜2028年度末）の受入見込数上限</div>
+</div>
+<div class="stat-item">
+<div class="s-num">151<span class="s-unit">人</span></div>
+<div class="s-label">2025年12月末時点の実際の在留人数（急増中）</div>
+</div>
+<div class="stat-item">
+<div class="s-num">3<span class="s-unit">区分</span></div>
+<div class="s-label">トラック・バス・タクシーの3業務区分</div>
+</div>
+</div>
+<h2><span class="section-zero">0</span><span class="section-num">2</span>｜受入企業が満たすべき要件</h2>
+<h3>Gマーク（トラック事業者の場合）</h3>
+<p>トラック運送事業者が特定技能外国人を受け入れるには、全日本トラック協会が認定する「安全性優良事業所（Gマーク）」の取得が必須です。</p>
+<div class="warn-box">
+<strong>⚠️ Gマークの取得率は全体の33.9%（2024年12月時点）</strong>
+<p>全国のトラック事業所のうち、Gマークを取得しているのはおよそ3分の1。取得していない中小零細企業は、特定技能制度の活用が難しい現状があります。LCGではGマーク未取得企業の取得サポートも対応可能です。まずはご相談ください。</p>
+</div>
+<h3>バス・タクシー事業者の場合</h3>
+<p>Gマーク不要の代わりに「働きやすい職場認証制度（運転者職場環境良好度認証）」の取得が求められます。特定技能制度をきっかけに、バス業界では前年度比130%、タクシー業界では130.7%と取得数が急増しています。</p>
+<h3>協議会への入会義務</h3>
+<p>最初の特定技能外国人を受け入れた日から4ヶ月以内に、国土交通省が設置する「自動車運送業分野特定技能協議会」への入会手続きが必要です。</p>
+<h2><span class="section-zero">0</span><span class="section-num">3</span>｜外国人材が満たすべき要件</h2>
+<div class="table-wrap">
+<table>
+<tr><th>要件</th><th>内容</th></tr>
+<tr><td>技能試験</td><td>「自動車運送業分野特定技能1号評価試験」に合格（学科＋判断等試験）</td></tr>
+<tr><td>日本語能力</td><td>トラック：N4以上 ／ バス・タクシー：N3以上</td></tr>
+<tr><td>運転免許</td><td>就労開始時点で日本の運転免許を保有していること（外免切替が必要）</td></tr>
+<tr><td>雇用形態</td><td>直接雇用のみ（派遣は不可）</td></tr>
+<tr><td>在留期間</td><td>特定技能1号：通算5年（家族帯同・更新は不可）</td></tr>
+</table>
+</div>
+<div class="insight-box">
+<strong>POINT</strong>
+    特定技能の申請時点で「日本の運転免許を保持していること」が求められます。そのため、海外から呼び寄せる場合は「特定活動（免許取得準備期間）」という在留資格で来日し、外免切替を経てから特定技能に変更するというルートが一般的です。
+  </div>
+<h2><span class="section-zero">0</span><span class="section-num">4</span>｜「特定活動」期間について</h2>
+<p>海外から採用する場合、日本の運転免許を持っていないまま入国し、日本で取得するための準備期間として「特定活動（特定自動車運送業準備）」という在留資格が設けられています。</p>
+<ul class="check-list">
+<li>トラック運転者の場合：最長6ヶ月（バス・タクシーは最長1年）</li>
+<li>この期間中は教習所への通所・免許試験の受験が主な活動</li>
+<li>車両の清掃・点検補助等の関連業務への従事は可能</li>
+<li>期間内に免許を取得できなかった場合は、原則として帰国となる</li>
+<li>受入企業は教習所費用・生活費・住居等のコストを負担することが多い</li>
+</ul>
+<p>この期間中のコスト・リスクが外国人採用のハードルになっているのが実情です。LCGでは、来日前のシミュレーター教育と学科eラーニングで合格率を高め、このリスクを最小化することを目指しています。</p>
+<h2><span class="section-zero">0</span><span class="section-num">5</span>｜受入企業の「本音」</h2>
+<p>物流ニュース社の調査（2025年9月、運送会社111社回答）では、83.7%が深刻な人手不足を感じていると回答。一方で特定技能外国人の採用に「消極的」と答えた企業が64.8%に上りました。</p>
+<div class="table-wrap">
+<table>
+<tr><th>採用を躊躇する理由</th><th>回答割合</th></tr>
+<tr><td>安全性への懸念（日本の道路に対応できるか）</td><td class="percent-highlight">66.2%</td></tr>
+<tr><td>言語・コミュニケーションの壁</td><td class="percent-highlight">54.4%</td></tr>
+<tr><td>住居確保等、支援体制の負担</td><td class="percent-highlight">47.1%</td></tr>
+</table>
+</div>
+<p>これらの不安は、準備をしっかり行えば解消できるものがほとんどです。名鉄バスが2024年にインドネシア国籍のドライバーを採用した事例では、<strong>母国での事前教育が成功の鍵</strong>だったと報告されています。</p>
+<div class="lcg-box">
+<h3>Gマーク取得の相談から受入まで<br/>LCGにお任せください</h3>
+<p>「まだGマークを取得していない」「どこから始めればいい？」お気軽にご相談ください。</p>
+<a class="cta-btn" href="gear01.html">まず1名から始める相談をする →</a>
+</div>
+<p class="source-note">
+    ※本記事のデータは以下の一次情報に基づいています。<br/>
+    国土交通省（特定技能・自動車運送業分野概要）・出入国在留管理庁・法務省（在留外国人統計）・全日本トラック協会（Gマーク取得状況）・物流ウィークリー（採用意識調査）・PR TIMES（働きやすい職場認証取得数）等。数値は公表時点のものです。
+  </p>
+</article>
+</body>
+</html>

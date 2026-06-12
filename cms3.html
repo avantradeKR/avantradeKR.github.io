@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>外免切替の合格率はなぜ10%以下なのか？2025年改正後の実態と対策 | LogiCoreGear</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --slate-950: #020617;
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --slate-600: #475569;
+            --slate-500: #64748b;
+            --slate-400: #94a3b8;
+            --slate-300: #cbd5e1;
+            --slate-200: #e2e8f0;
+            --slate-100: #f1f5f9;
+            --slate-50: #f8fafc;
+            --sky-800: #075985;
+            --sky-700: #0369a1;
+            --sky-600: #0284c7;
+            --sky-500: #0ea5e9;
+            --sky-100: #e0f2fe;
+            --sky-50: #f0f9ff;
+            --orange-500: #f97316;
+            --orange-400: #fb923c;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            color: var(--slate-900);
+            background: var(--slate-50);
+            letter-spacing: -0.01em;
+        }
+
+        .site-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--slate-200);
+        }
+
+        .site-nav-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: inline-flex;
+            align-items: center;
+            color: var(--slate-900);
+            font-size: 20px;
+            font-weight: 900;
+            text-decoration: none;
+            letter-spacing: -0.03em;
+        }
+
+        .nav-logo img {
+            height: 40px;
+            width: auto;
+            margin-right: 12px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            color: var(--slate-600);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--sky-600);
+        }
+
+        .nav-cta {
+            background: var(--sky-700);
+            color: #fff !important;
+            padding: 10px 24px;
+            border-radius: 10px;
+            box-shadow: 0 10px 24px rgba(14, 165, 233, 0.2);
+        }
+
+        .article-hero {
+            position: relative;
+            padding: 176px 24px 96px;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.28), transparent 32%),
+                radial-gradient(circle at 85% 30%, rgba(249, 115, 22, 0.18), transparent 30%),
+                linear-gradient(135deg, #0f172a 0%, #172033 48%, #1e293b 100%);
+        }
+
+        .article-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+            background-size: 44px 44px;
+            opacity: 0.45;
+        }
+
+        .article-hero-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 920px;
+            margin: 0 auto;
+        }
+
+        .cat {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(224, 242, 254, 0.12);
+            color: #7dd3fc;
+            border: 1px solid rgba(125, 211, 252, 0.28);
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            padding: 9px 18px;
+            border-radius: 999px;
+            margin-bottom: 28px;
+        }
+
+        .article-hero h1 {
+            margin: 0 auto 22px;
+            max-width: 1160px;
+            font-size: clamp(26px, 3.4vw, 42px);
+            line-height: 1.45;
+            font-weight: 900;
+            letter-spacing: -0.035em;
+        }
+
+        .article-hero .meta {
+            color: var(--slate-300);
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+
+        .article-shell {
+            max-width: 1120px;
+            margin: -42px auto 0;
+            padding: 0 24px 96px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .article-body {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 56px 54px 64px;
+            background: #fff;
+            border: 1px solid var(--slate-200);
+            border-radius: 32px;
+            box-shadow: 0 24px 80px rgba(15, 23, 42, 0.10);
+        }
+
+        .article-body .lead {
+            font-size: 18px;
+            line-height: 2;
+            color: var(--slate-700);
+            background: var(--sky-50);
+            border: 1px solid var(--sky-100);
+            border-left: 6px solid var(--sky-700);
+            border-radius: 22px;
+            padding: 28px 30px;
+            margin: 0 0 56px;
+            font-weight: 500;
+        }
+
+        .article-body h2 {
+            margin: 60px 0 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--slate-200);
+            color: var(--slate-900);
+            font-size: clamp(24px, 3vw, 34px);
+            line-height: 1.45;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+        }
+
+        .section-zero {
+            color: var(--slate-900);
+        }
+
+        .section-num {
+            color: var(--orange-500);
+        }
+
+        .article-body h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .article-body h3 {
+            margin: 38px 0 14px;
+            color: var(--sky-800);
+            font-size: 20px;
+            line-height: 1.55;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+        }
+
+        .article-body p {
+            margin: 0 0 20px;
+            color: var(--slate-600);
+            font-size: 16px;
+            line-height: 2;
+            font-weight: 400;
+        }
+
+        .data-box {
+            margin: 32px 0;
+            padding: 32px;
+            color: #fff;
+            background: linear-gradient(135deg, var(--slate-900), var(--slate-800));
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 28px;
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.22);
+            overflow-x: auto;
+        }
+
+        .data-box h4 {
+            margin: 0 0 18px;
+            color: #7dd3fc;
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .data-table {
+            width: 100%;
+            min-width: 580px;
+            border-collapse: collapse;
+        }
+
+        .data-table th {
+            padding: 13px 16px;
+            text-align: left;
+            background: rgba(255,255,255,0.08);
+            color: var(--slate-300);
+            font-size: 13px;
+            font-weight: 700;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .data-table td {
+            padding: 16px;
+            color: var(--slate-100);
+            font-size: 14px;
+            line-height: 1.7;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .data-table td.num {
+            color: var(--orange-400) !important;
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            white-space: nowrap;
+        }
+
+        .fact-block {
+            margin: 28px 0;
+            padding: 26px 28px;
+            background: var(--sky-50);
+            border: 1px solid var(--sky-100);
+            border-left: 5px solid var(--sky-700);
+            border-radius: 22px;
+            color: var(--slate-700);
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .fact-block strong {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--sky-800);
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .reason-list {
+            list-style: none;
+            margin: 24px 0 8px;
+            padding: 0;
+            display: grid;
+            gap: 16px;
+        }
+
+        .reason-list li {
+            display: flex;
+            gap: 18px;
+            padding: 22px 24px;
+            background: #fff;
+            border: 1px solid var(--slate-200);
+            border-radius: 22px;
+            box-shadow: 0 14px 34px rgba(15, 23, 42, 0.05);
+        }
+
+        .reason-list li .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            flex: 0 0 42px;
+            background: var(--sky-50);
+            border: 1px solid var(--sky-100);
+            border-radius: 14px;
+            font-size: 22px;
+        }
+
+        .reason-list li .content strong {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--slate-900);
+            font-size: 16px;
+            font-weight: 900;
+            line-height: 1.5;
+        }
+
+        .reason-list li .content span {
+            display: block;
+            color: var(--slate-600);
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .lcg-box {
+            margin: 60px 0 0;
+            padding: 44px 34px;
+            text-align: center;
+            color: #fff;
+            background:
+                radial-gradient(circle at 20% 10%, rgba(14,165,233,0.24), transparent 34%),
+                linear-gradient(135deg, var(--slate-900), var(--slate-800));
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 32px;
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.25);
+        }
+
+        .lcg-box h3 {
+            margin: 0 0 12px;
+            color: #fff;
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+        }
+
+        .lcg-box p {
+            margin: 0 0 28px;
+            color: var(--slate-300);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .lcg-box .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 54px;
+            padding: 0 34px;
+            color: #fff;
+            background: var(--orange-500);
+            border-radius: 999px;
+            font-size: 15px;
+            font-weight: 900;
+            text-decoration: none;
+            box-shadow: 0 16px 30px rgba(249, 115, 22, 0.22);
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .lcg-box .cta-btn:hover {
+            transform: translateY(-2px);
+            background: #ea580c;
+        }
+
+        .source-note {
+            margin-top: 56px;
+            padding-top: 28px;
+            border-top: 1px solid var(--slate-200);
+            color: var(--slate-400);
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .article-hero {
+                padding: 136px 20px 72px;
+            }
+            .article-body {
+                padding: 34px 22px 44px;
+                border-radius: 24px;
+            }
+            .article-body .lead {
+                padding: 22px;
+                font-size: 16px;
+            }
+            .data-box {
+                padding: 24px 18px;
+                border-radius: 22px;
+            }
+            .reason-list li {
+                padding: 20px;
+            }
+            .lcg-box {
+                padding: 34px 22px;
+            }
+            .lcg-box h3 {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="site-nav">
+<div class="site-nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="LogiCoreGear Logo" src="logo.png"/>
+            LogiCoreGear
+        </a>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="index.html#challenges">解決する課題</a>
+<a href="gear01.html">採用までのフロー</a>
+<a href="index.html#company">会社概要</a>
+<a class="nav-cta" href="index.html#contact">お問い合わせ</a>
+</div>
+</div>
+</nav>
+<header class="article-hero">
+<div class="article-hero-inner">
+<span class="cat">Insight</span>
+<h1>外免切替の合格率はなぜ10%以下なのか？<br/>2025年改正後の実態と、LCGが取り組む対策</h1>
+<p class="meta">2026.05.12 ｜ 所要時間：約6分</p>
+</div>
+</header>
+<div class="article-shell">
+<article class="article-body">
+<p class="lead">
+    海外で取得した運転免許を日本の免許に切り替える「外国免許切替（外免切替）」。2025年10月の制度改正によって、その難易度は大幅に上昇しました。技能確認（実技試験）の合格率はなんと13.1%。これがLCGが徹底的なサポート体制を構築している理由です。本記事では、外免切替の現状と、なぜここまで難しいのかを解説します。
+  </p>
+<h2><span class="section-zero">0</span><span class="section-num">1</span>｜2025年10月に何が変わったのか</h2>
+<p>2025年10月に施行された大規模な制度改正は、外免切替の性格を根本から変えました。「交通安全の観点から不十分なまま公道に出る外国人ドライバーが増えている」という社会問題への対応として、政府の「骨太の方針2025」に外免切替の厳格化が明記され、全国的な運用見直しが断行されました。</p>
+<div class="data-box">
+<h4>BEFORE vs AFTER — 知識確認（学科試験）の変化</h4>
+<table class="data-table">
+<tr><th>項目</th><th>改正前（2024年通年）</th><th>改正後（2025年10月〜）</th></tr>
+<tr><td>問題数</td><td>10問（イラスト○×形式）</td><td>50問（文章問題）</td></tr>
+<tr><td>合格基準</td><td>70%以上</td><td>90%以上（45問正解が必要）</td></tr>
+<tr><td class="">合格率</td><td class="num">92.5%</td><td class="num" style="color:#EF4444;">42.8%</td></tr>
+</table>
+</div>
+<div class="data-box" style="margin-top:16px;">
+<h4>BEFORE vs AFTER — 技能確認（実技試験）の変化</h4>
+<table class="data-table">
+<tr><th>期間</th><th>合格率</th><th>備考</th></tr>
+<tr><td>2025年1〜9月（厳格化前）</td><td class="num">30.4%</td><td style="font-size:13px;color:#94A3B8;">以前からある程度の難易度</td></tr>
+<tr><td>2025年10〜12月（厳格化後）</td><td class="num" style="color:#EF4444;">13.1%</td><td style="font-size:13px;color:#94A3B8;">受験者の約9割が不合格</td></tr>
+</table>
+</div>
+<p style="margin-top:24px;">技能確認の合格率13.1%という数字は、新規の「一発試験」と同等かそれ以上に低い水準です。日本で何十年も運転経験を持つ人でも、「日本の試験の作法」を知らなければ合格できないということを意味しています。</p>
+<h2><span class="section-zero">0</span><span class="section-num">2</span>｜なぜそんなに難しいのか：不合格の主な理由</h2>
+<h3>① 学科試験：言語の壁と法規の深さ</h3>
+<p>50問の文章問題では、「原則として」「直ちに」「すみやかに」といった日本語特有の義務・許可の強度を示す表現のニュアンスが問われます。単に単語を知っているだけでは通用しません。試験は20言語に対応していますが、「交通概念そのものが母国に存在しない」場合は翻訳しても意図が伝わらないケースも多くあります。</p>
+<h3>② 技能確認：日本独自の「作法」が求められる</h3>
+<ul class="reason-list">
+<li>
+<span class="icon">🚶</span>
+<div class="content">
+<strong>歩行者保護（最重要項目）</strong>
+<span>横断歩道に歩行者がいる場合、一時停止線の手前で完全に停止することが義務。海外では歩行者が譲ってくれた場合に進行するのが一般的ですが、日本の試験ではこれは即中止に近い重大な減点対象となります。</span>
+</div>
+</li>
+<li>
+<span class="icon">👀</span>
+<div class="content">
+<strong>目視確認の「作法」</strong>
+<span>ミラーだけでなく必ず顔を振って直接目視する「ダイレクトチェック」が必須。左折時の「巻き込み確認」は後輪が左端に寄る前に完了しなければならず、タイミングの遅れは即減点です。</span>
+</div>
+</li>
+<li>
+<span class="icon">🚂</span>
+<div class="content">
+<strong>踏切での「窓開け」</strong>
+<span>踏切の手前では一時停止のうえ、窓を少し開けて「音を聞く」動作が評価項目に含まれています。事前知識がなければ、ほぼ全員が見落とします。</span>
+</div>
+</li>
+<li>
+<span class="icon">📍</span>
+<div class="content">
+<strong>ウィンカーのタイミング</strong>
+<span>進路変更は「3秒前の合図」「30メートル前」など、定められた秒数・距離の中で確認→合図→再確認→変更という一連の手順を正確に行う必要があります。</span>
+</div>
+</li>
+</ul>
+<h2><span class="section-zero">0</span><span class="section-num">3</span>｜もう一つの壁：「予約が取れない」問題</h2>
+<p>制度の難化に加えて、免許センターの予約が取れないという物理的な問題も深刻です。TSMCの進出等で外国人人口が急増した熊本県では、予約から試験実施まで「3ヶ月待ち」が常態化。定員が1日25名しかないセンターでは、枠が数分で埋まることもあります。</p>
+<div class="fact-block">
+<strong>NOTE</strong>
+    フィリピン・インドネシア・ベトナム・カンボジアは「非免除国」に分類されています。これらの国出身の方は、学科・技能ともに試験を受ける必要があります（ドイツ・フランス・韓国等の「免除対象国」とは異なり、試験免除は受けられません）。
+  </div>
+<h2><span class="section-zero">0</span><span class="section-num">4</span>｜LCGのアプローチ：合格率を上げるために</h2>
+<p>これだけ難しい試験だからこそ、LCGは「来日前から始める」教育体制を構築しています。</p>
+<div class="fact-block">
+<strong>LCGの対策プログラム</strong>
+    ①学科eラーニング（元教習所校長監修）→ ②シミュレーターで試験コースを反復練習 → ③教習所での実車訓練 → ④不合格時の原因分析＆再トレーニング。①と②は来日前の母国段階からスタートします。
+  </div>
+<p>特にシミュレーターでは、「窓の開け方」「ウィンカーのタイミング」「歩行者への対応」といった日本独自の所作を、失敗を恐れずに何度でも練習できます。また、来日前のeラーニングデータで学習意欲・適性を可視化できるため、「来日前に合否の見通しが立てられる」のがLCGの強みです。</p>
+<div class="lcg-box">
+<h3>外免切替について、まずご相談ください</h3>
+<p>「どのくらい時間がかかる？」「費用は？」どんな疑問でもお気軽に。</p>
+<a class="cta-btn" href="gear01.html">無料相談・資料請求はこちら →</a>
+</div>
+<p class="source-note">
+    ※本記事の統計データは以下の一次情報に基づいています。<br>
+    警察庁統計・大阪府警（外免切替手続の見直し概要資料）・自由民主党ニュース（2025年制度改正）・TBS NEWS DIG（技能確認合格率）・Skilled Worker JP（2025年10月改正まとめ）等。数値は公表時点のものであり、変更になる場合があります。
+  </br></p>
+</article>
+</div>
+</body>
+</html>
